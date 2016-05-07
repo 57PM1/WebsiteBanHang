@@ -1,0 +1,80 @@
+.cartTable {
+    width: 100%;
+    border: solid 1px #e0e0e0;
+}
+.cartTable>thead {
+    background: #6BC15F;
+    color: #fff;
+}
+.cartTable>thead>tr>th {
+    padding: 6px 5px;
+    font-weight: 500;
+    border-right: 2px solid #fff;
+    text-align: center;
+}
+.cartTable>tbody>tr:nth-child(odd) {
+    background: #FFF;
+}
+.cartTable>tbody>tr:nth-child(even) {
+    background: #F5F5F5;
+}
+.cartTable>tbody>tr>td {
+    padding: 10px 5px;
+    border-right: 2px solid #fff;
+}
+.cartTable .price {
+    text-align: right;
+}
+.cartTable .pricenumber {
+    color:red;
+}
+.stt,
+.img,
+.soluong,
+.del
+{
+    text-align: center !important;
+}
+.cartTable .tongthanhtoan,.cartTable .toolcart {
+    text-align: right;
+}
+.navCart {
+    margin-bottom: 5px;
+}
+.navCart>li {
+    color:#2d731f;
+    font-size: 18px;
+}
+.navCart>li>i {
+    color: #f9d348;
+    font-size: 20px;
+}
+.productOther h1.title {
+    color:#77b109;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.boxdathang {display: none}
+
+.khachhangthanhtoan{display: none}
+
+.khachhangthanhtoan h3.title{
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: #F8694D solid 1px;
+    margin: 20px 0;
+    color: #F8694D;
+}
+
+.btnDathang, .btnCapnhat {
+    border: solid 1px #6BC15F;
+    background: #fff;
+    color: #3CAD2C;
+    padding: 5px 10px;
+    transition: all 0.3s linear;
+}
+
+.btnDathang:hover, .btnCapnhat:hover {
+    background: #6BC15F;
+    color: #fff;
+}

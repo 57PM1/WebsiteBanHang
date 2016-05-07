@@ -1,0 +1,14 @@
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\bin\Debug\Models.dll.config
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\bin\Debug\Models.dll
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\bin\Debug\Models.pdb
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\bin\Debug\EntityFramework.dll
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\bin\Debug\PagedList.dll
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\bin\Debug\PagedList.Mvc.dll
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\bin\Debug\EntityFramework.xml
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\bin\Debug\PagedList.xml
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\bin\Debug\PagedList.Mvc.xml
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\obj\Debug\Models.dll
+C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\obj\Debug\Models.pdb

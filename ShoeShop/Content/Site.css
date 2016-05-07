@@ -1,0 +1,41 @@
+﻿body {
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+.body-slider{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 50px;
+}
+.sp-ol-img {
+    width: 30px;
+    margin-top: 150px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+footer{
+    color: white;
+    position: relative;
+    margin-bottom: 0px;   
+}
+#myCarousel{
+    margin-top: 10px;
+}

@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "AddPage";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+    <div class="row">
+        <div class="w-100 text-center">
+            <h1>Thêm trang mới</h1>
+        </div>
+        <div class="w-100">
+            <div class="w-100-form-add">
+                <form action="" method="post" class="form-group">
+                    <input type="hidden" name="atc" value="insert" />
+                    <label for="txt_title">Tiêu đề</label>
+                    <input type="text" name="txt_title" class="form-control" placeholder="Nhập tiêu đề tại đây" /><br />
+                    <label for="txt_postdate">Ngày đăng</label>
+                    <input type="date" name="txt_postdate" class="form-control" placeholder="Ngày đăng" /><br />
+                    <label for="txt_author">Tác giả</label>
+                    <input type="text" name="txt_author" placeholder="Tác giả" class="form-control" /><br />
+                    <br />
+                    <main>
+                        <div class="adjoined-bottom">
+                            <div class="grid-container w-100">
+                                <div class="grid-width-100">
+                                    <div id="editor">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    <br />
+                    <div class="text-row-1-content">
+                        <input type="submit" class="btn btn-primary" value="Thêm mới" />
+                        <input type="reset" class="btn btn-danger" value="Nhập lại" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+	initSample();
+    </script>
+
+
+<script src="~/Assets/admin/bower_components/jquery/dist/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="~/Assets/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="~/Assets/admin/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+<!-- DataTables JavaScript -->
+<script src="~/Assets/admin/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="~/Assets/admin/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="~/Assets/admin/dist/js/sb-admin-2.js"></script>
+<!--sb-admin.js-->
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+<script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+</script>
+

@@ -1,0 +1,102 @@
+﻿
+.navbar .navbar-default .navbar-static-top{
+    position: fixed;
+    width: 100%;
+}
+.text-row-1-content{
+    font-size: 20px;
+    font-weight:bold;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+@media (min-width: 768px) {
+    .col-sm-3 .page-title {
+        height: 50px;
+        line-height: 50px;
+    }
+    .col-sm-9 {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .top-content {
+        width: 100%;
+    }
+
+    ul li {
+        list-style-type: none;
+        display: inline;
+    }
+
+    .tablenav {
+        clear: both;
+        height: 30px;
+        margin: 6px 0 4px;
+        vertical-align: middle;
+    }
+
+    .screen-reader-text {
+        position: absolute;
+        margin: -1px;
+        padding: 0;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        border: 0;
+        word-wrap: normal !important;
+    }
+
+    .top-tbl-page{
+        margin-left:15px;
+        margin-top: 20px;
+    }
+    .w10{width: 10px;}
+    .w20{width: 20px;}
+    .w30{width: 30px;}
+    .w50{width: 50px;}
+    .w100{width: 100px;}
+    .w500{width: 500px;}
+    .h30{height: 30px;}
+    .h20{height: 20px;}
+}
+
+.panel-heading{
+        padding-top: 0px !important;
+        padding-right: 15px;
+        padding-bottom: 0px !important;
+        padding-left: 15px; 
+    }
+table th{
+    font-size: 20px;
+}
+table tr{
+    font-size: 16px;
+    font-weight: bolder;
+
+}
+.w-100{
+    width: 100%;
+}
+.w-100 ul{
+    list-style: none;
+    display: inline;
+    text-align: center;
+    padding-left:0px !important;
+}
+.w-100 ul li a{
+    font-size: 12px;
+    font-weight: normal;
+}
+.w-100 ul li a:hover{
+    color: red;
+}
+.grid-width-100{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.w-100-form-add{
+    padding-left: 15px;
+    padding-right: 15px;
+}

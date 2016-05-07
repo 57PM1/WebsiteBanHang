@@ -1,0 +1,423 @@
+﻿@{
+    ViewBag.Title ="Giày dép-giá rẻ nhất";
+}
+@model ShoeShop.Models.HomePageViewModel
+<<div class="container" style="padding-top: 10px;">
+    <div id="wrapper">
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+                <script type="text/javascript">
+
+                    $(document).ready(function () {
+
+                        //box-support -------------------------------
+                        var cat = $('.product_cate>ul');
+                        $('.btn_cat').click(function (event) {
+
+                            event.preventDefault();
+                            // if the menu is visible slide it up
+                            if (cat.is(":visible"))
+                            {
+                                cat.slideUp(400);
+                                //$(this).removeClass("open");
+                            }
+                            // otherwise, slide the menu down
+                            else
+                            {
+                                cat.slideDown(400);
+                                //$(this).addClass("open");
+                            }
+                        });
+
+
+                        var sub = $('#sup_cate');
+                        $('.btn_sup').click(function (event) {
+                            event.preventDefault();
+                            if (sub.is(":visible")) {
+                                sub.hide(50);
+                                $('.btn_sup').css({'transform': 'rotate(90deg)'});
+
+                            } else {
+                                sub.show(10, 'swing');
+                                $('.btn_sup').css({'transform': 'rotate(-90deg)'});
+                            }
+                        });
+
+
+                    });
+                </script>
+
+                <div class="main_pro_cate">
+                    <div class="header_cate"><span class="btn_cat"><i class="glyphicon glyphicon-align-justify"></i></span>Danh mục</div>
+                    <div class="product_cate">
+                        <ul style="padding-left: 0px;">
+                            @foreach (var cate in Model.Danhmucsanphams)
+                            {
+                                <li>
+                                    <a title="@cate.MetaTitle" href="">
+                                        <span>@cate.Name</span>
+                                        <div class="clearfix"></div>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-9 col-md-9">
+                <div class="slide">
+                    <!--Box-->
+                    <div class="boxItem">
+                        <script type="text/javascript" src="http://www.alotraicay.com/site/mod/mod_slide/asset/jssor.js"></script>
+                        <script type="text/javascript" src="http://www.alotraicay.com/site/mod/mod_slide/asset/jssor.slider.js"></script>
+                        <script>
+                            jQuery(document).ready(function ($) {
+
+                                var _CaptionTransitions = [];
+
+
+                                var options = {
+                                    $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
+                                    $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                                    $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                                    $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+                                    $ArrowKeyNavigation: true,                           //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                                    //$SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
+                                    //$SlideDuration: 800,                               //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                                    $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                                    //$SlideWidth: 100%,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                                    $SlideHeight: 295,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                                    $SlideSpacing: 0,                                     //[Optional] Space between each slide in pixels, default value is 0
+                                    $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                                    $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                                    $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                                    $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+                                    $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                                    $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
+                                        $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
+                                        $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
+                                        $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after main slide), 3 Chain Flatten (goes after main slide and flatten all caption animations), default value is 1
+                                        $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before main slide), 3 Chain Flatten (goes before main slide and flatten all caption animations), default value is 1
+                                    },
+
+                                    $BulletNavigatorOptions: {                          //[Optional] Options to specify and enable navigator or not
+                                        $Class: $JssorBulletNavigator$,                 //[Required] Class to create navigator instance
+                                        $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                                        $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                                        $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+                                        $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+                                        $SpacingX: 8,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                                        $SpacingY: 8,                                   //[Optional] Vertical space between each item in pixel, default value is 0
+                                        $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                                    },
+
+                                    $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
+                                        $Class: $JssorArrowNavigator$,                  //[Requried] Class to create arrow navigator instance
+                                        $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                                        $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                                        $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+                                    }
+
+
+
+                                };
+
+                                var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+                                //responsive code begin
+                                //you can remove responsive code if you don't want the slider scales while window resizes
+                                function ScaleSlider() {
+                                    var bodyWidth = document.body.clientWidth;
+                                    if (bodyWidth)
+                                        jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 890));
+                                    else
+                                        window.setTimeout(ScaleSlider, 30);
+                                }
+                                ScaleSlider();
+
+                                $(window).bind("load", ScaleSlider);
+                                $(window).bind("resize", ScaleSlider);
+                                $(window).bind("orientationchange", ScaleSlider);
+                                //responsive code end
+                            });
+                        </script>
+                        <div id="slider1_container" style="position: relative; margin: 0 auto;top: 0px; left: 0px; width: 890px; height: 295px; overflow: hidden;" jssor-slider="true">
+
+
+                            <div style="position: absolute; top: 0px; left: 0px; width: 890px; height: 295px; transform-origin: 0px 0px 0px; transform: scale(1);">
+                                <div class="" style="position: relative; margin: 0px auto; top: 0px; left: 0px; width: 890px; height: 295px; overflow: visible; display: block;">
+                                    <div u="loading" style="position: absolute; top: 0px; left: 0px; width: 890px; height: 295px; display: none;" debug-id="loading-container">
+                                        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;top: 0px; left: 0px; width: 100%; height: 100%;">
+                                        </div>
+                                        <div style="position: absolute; display: block; background: url(http://www.alotraicay.com/site/mod/mod_slide/asset/img/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                        </div>
+                                    </div><div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 890px; height: 295px; overflow: hidden; z-index: 0;"><div debug-id="slide_container" style="position: absolute; z-index: 0; pointer-events: none; left: -890px; top: 0px;"></div></div><div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 890px; height: 295px; overflow: hidden; z-index: 0;" debug-id="slide-board">
+                                        <div style="width: 890px; height: 295px; top: 0px; left: 0px; position: absolute; opacity: 0; display: none; background-color: rgb(0, 0, 0);"></div>
+                                        <div debug-id="slide-0" style="width: 890px; height: 295px; top: 0px; left: -890px; position: absolute; overflow: hidden; transform: perspective(2000px);">
+                                            <a href="http://www.alotraicay.com/trai-cay-3-mien/bo-sap-daklak-hat-nho.html" title="" alt="" style="width: 890px; height: 295px; top: 0px; left: 0px; transform: perspective(2000px);" jssor-content="true"><img alt="" title="" u="image" style="left: 0px; top: -17.4118px; width: 890px; height: 329.824px; transform: perspective(2000px); position: absolute;" src="http://www.alotraicay.com/data/sl/bdb4d1731da4b89868f1d32b3b20cbb0.jpg" border="0" jssor-content="true"></a>
+
+                                            <div u="loading" style="position: absolute; top: 0px; left: 0px; width: 890px; height: 295px; z-index: 1000; display: none;" jssor-content="true">
+                                                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;top: 0px; left: 0px; width: 100%; height: 100%;" jssor-content="true">
+                                                </div>
+                                                <div style="position: absolute; display: block; background: url(http://www.alotraicay.com/site/mod/mod_slide/asset/img/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;" jssor-content="true">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div debug-id="slide-1" style="width: 890px; height: 295px; top: 0px; left: 0px; position: absolute; overflow: hidden; transform: perspective(2000px);">
+                                            <a href="http://www.alotraicay.com/hoa-qua-nhap-khau/tao-huu-co-phap-juliet-organic.html" title="" alt="" style="width: 890px; height: 295px; top: 0px; left: 0px; transform: perspective(2000px);" jssor-content="true"><img alt="" title="" u="image" style="left: 0px; top: -17.15px; width: 890px; height: 329.3px; transform: perspective(2000px); position: absolute;" src="http://www.alotraicay.com/data/sl/2b5f8e8ce4f3a890d7bb8af15ad2b44d.jpg" border="0" jssor-content="true"></a>
+
+                                            <div u="loading" style="position: absolute; top: 0px; left: 0px; width: 890px; height: 295px; z-index: 1000; display: none;" jssor-content="true">
+                                                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;top: 0px; left: 0px; width: 100%; height: 100%;" jssor-content="true">
+                                                </div>
+                                                <div style="position: absolute; display: block; background: url(http://www.alotraicay.com/site/mod/mod_slide/asset/img/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;" jssor-content="true">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div debug-id="slide-2" style="width: 890px; height: 295px; top: 0px; left: 890px; position: absolute; overflow: hidden; transform: perspective(2000px);">
+                                            <a href="http://www.alotraicay.com/hoa-qua-nhap-khau/dau-tay-han-quoc.html" title="" alt="" style="width: 890px; height: 295px; top: 0px; left: 0px; transform: perspective(2000px);" jssor-content="true"><img alt="" title="" u="image" style="left: 0px; top: -17.15px; width: 890px; height: 329.3px; transform: perspective(2000px); position: absolute;" src="http://www.alotraicay.com/data/sl/efc319e3c84f970c661353163ede70ad.png" border="0" jssor-content="true"></a>
+
+                                            <div u="loading" style="position: absolute; top: 0px; left: 0px; width: 890px; height: 295px; z-index: 1000; display: none;" jssor-content="true">
+                                                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;top: 0px; left: 0px; width: 100%; height: 100%;" jssor-content="true">
+                                                </div>
+                                                <div style="position: absolute; display: block; background: url(http://www.alotraicay.com/site/mod/mod_slide/asset/img/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;" jssor-content="true">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <style>
+                                                .jssorb21 {
+                                                    position: absolute;
+                                                }
+
+                                                    .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+                                                        position: absolute;
+                                                        /* size of bullet elment */
+                                                        width: 19px;
+                                                        height: 19px;
+                                                        text-align: center;
+                                                        line-height: 19px;
+                                                        color: white;
+                                                        font-size: 12px;
+                                                        background: url(http://www.alotraicay.com/site/mod/mod_slide/asset/img/b21.png) no-repeat;
+                                                        overflow: hidden;
+                                                        cursor: pointer;
+                                                    }
+
+                                                    .jssorb21 div {
+                                                        background-position: -5px -5px;
+                                                    }
+
+                                                        .jssorb21 div:hover, .jssorb21 .av:hover {
+                                                            background-position: -35px -5px;
+                                                        }
+
+                                                    .jssorb21 .av {
+                                                        background-position: -65px -5px;
+                                                    }
+
+                                                    .jssorb21 .dn, .jssorb21 .dn:hover {
+                                                        background-position: -95px -5px;
+                                                    }
+                                    </style><div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px; width: 72.9745px; height: 18.9915px; left: 408.513px;">
+                                        <!-- bullet navigator item prototype -->
+
+                                        <div u="prototype" class="" style="position: absolute; left: 0px; top: 0px;"></div><div u="prototype" class="av" style="position: absolute; left: 26.9915px; top: 0px;"></div><div u="prototype" class="" style="position: absolute; left: 53.983px; top: 0px;"></div>
+                                    </div>
+                                    <style>
+                                                .jssora21l, .jssora21r {
+                                                    display: block;
+                                                    position: absolute;
+                                                    /* size of arrow element */
+                                                    width: 55px;
+                                                    height: 55px;
+                                                    cursor: pointer;
+                                                    background: url(http://www.alotraicay.com/site/mod/mod_slide/asset/img/a21.png) center center no-repeat;
+                                                    overflow: hidden;
+                                                }
+
+                                                .jssora21l {
+                                                    background-position: -3px -33px;
+                                                }
+
+                                                .jssora21r {
+                                                    background-position: -63px -33px;
+                                                }
+
+                                                .jssora21l:hover {
+                                                    background-position: -123px -33px;
+                                                }
+
+                                                .jssora21r:hover {
+                                                    background-position: -183px -33px;
+                                                }
+
+                                                .jssora21l.jssora21ldn {
+                                                    background-position: -243px -33px;
+                                                }
+
+                                                .jssora21r.jssora21rdn {
+                                                    background-position: -303px -33px;
+                                                }
+                                    </style><span u="arrowleft" class="jssora21l" style="top: 120px; left: 8px; display: none;">
+                                    </span><span u="arrowright" class="jssora21r" style="top: 120px; right: 8px; display: none;">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--End Box-->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="pageContent">
+            <!-- product -->
+            <h1 style="display: none">Shop thời trang nam</h1>
+
+            <div class="title_product_hot">
+                Sản phẩm nổi bật
+            </div>
+            <ul class="product_grid">
+                <li class=" items col-lg-20 col-md-3 col-sm-4 col-xs-6 col-xs1-12">
+                    <a title="Áo sơ mi dài tay" href="">
+                        <img title="Áo sơ mi dài tay" alt="Áo sơ mi dài tay" src="~/Assets/Content/Images/sm.1.jpg">
+                    </a>
+                    <div class="price_box">
+                        <span class="product_name">
+                            <a title="Áo sơ mi dài tay" href="">
+                                Áo sơ mi dài tay
+                            </a>
+                        </span>
+                        <span class="product_price">
+                            250.000 ₫
+                        </span>
+                    </div>
+                </li>
+                <li class=" items col-lg-20 col-md-3 col-sm-4 col-xs-6 col-xs1-12">
+                    <a title="Áo sơ mi cộc tay" href="">
+                        <img title="Áo phông cộc tay" alt="Áo phông cộc tay" src="~/Assets/Content/Images/sm.2.jpg">
+                    </a>
+                    <div class="price_box">
+                        <span class="product_name">
+                            <a title="Áo phông cộc tay" href="">
+                                Áo sơ mi cộc tay
+                            </a>
+                        </span>
+                        <span class="product_price">
+                            230.000 ₫
+                        </span>
+                    </div>
+                </li>
+                <li class=" items col-lg-20 col-md-3 col-sm-4 col-xs-6 col-xs1-12">
+                    <a title="Áo phông A101" href="">
+                        <img title="Áo phông A101" alt="Áo phông A101" src="~/Assets/Content/Images/p1.jpg">
+                    </a>
+                    <div class="price_box">
+                        <span class="product_name">
+                            <a title="Áo phông A101" href="">
+                                Áo phông A101
+                            </a>
+                        </span>
+                        <span class="product_price">
+                            250.000 ₫
+                        </span>
+                    </div>
+                </li>
+                <li class=" items col-lg-20 col-md-3 col-sm-4 col-xs-6 col-xs1-12">
+                    <a title="Áo phông A102" href="">
+                        <img title="Áo phông A102" alt="Áo phông A102" src="~/Assets/Content/Images/p2.jpg">
+                    </a>
+                    <div class="price_box">
+                        <span class="product_name">
+                            <a title="Áo phông A102" href="">
+                                Áo phông A102
+                            </a>
+                        </span>
+                        <span class="product_price">
+                            250.000 ₫
+                        </span>
+                    </div>
+                </li>
+
+                <div class="clearfix"></div>
+            </ul>
+
+            <div class="title_product">
+                <h2>
+                    <a href="">Áo phông</a>
+                </h2>
+            </div>
+            <ul class="product_grid white_bg">
+                <li class=" items col-lg-20 col-md-3 col-sm-4 col-xs-6 col-xs1-12">
+                    <a title="Áo phông A103" href="">
+                        <img title="Áo phông A103" alt="Áo phông A103" src="~/Assets/Content/Images/p3.jpg">
+                    </a>
+                    <div class="price_box">
+                        <span class="product_name">
+                            <a title="Áo phông A103" href="">
+                                Áo phông A103
+                            </a>
+                        </span>
+                        <span class="product_price">
+                            124.000 ₫
+                        </span>
+                    </div>
+                </li>
+                <li class=" items col-lg-20 col-md-3 col-sm-4 col-xs-6 col-xs1-12">
+                    <a title="Áo phông A103" href="">
+                        <img title="Áo phông A104" alt="Áo phông A104" src="~/Assets/Content/Images/p4.jpg">
+                    </a>
+                    <div class="price_box">
+                        <span class="product_name">
+                            <a title="Áo phông A104" href="">
+                                Áo phông A104
+                            </a>
+                        </span>
+                        <span class="product_price">
+                            124.000 ₫
+                        </span>
+                    </div>
+                </li>
+                <li class=" items col-lg-20 col-md-3 col-sm-4 col-xs-6 col-xs1-12">
+                    <a title="Áo phông A103" href="">
+                        <img title="Áo phông A105" alt="Áo phông A105" src="~/Assets/Content/Images/p5.jpg">
+                    </a>
+                    <div class="price_box">
+                        <span class="product_name">
+                            <a title="Áo phông A105" href="">
+                                Áo phông A105
+                            </a>
+                        </span>
+                        <span class="product_price">
+                            124.000 ₫
+                        </span>
+                    </div>
+                </li>
+                <li class=" items col-lg-20 col-md-3 col-sm-4 col-xs-6 col-xs1-12">
+                    <a title="Áo phông A106" href="">
+                        <img title="Áo phông A103" alt="Áo phông A106" src="~/Assets/Content/Images/p6.jpg">
+                    </a>
+                    <div class="price_box">
+                        <span class="product_name">
+                            <a title="Áo phông A106" href="">
+                                Áo phông A106
+                            </a>
+                        </span>
+                        <span class="product_price">
+                            124.000 ₫
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
