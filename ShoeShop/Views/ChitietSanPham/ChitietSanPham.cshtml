@@ -1,0 +1,591 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../Assets/Css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../Assets/Css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../Assets/Css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="../Assets/Css/Style.css" rel="stylesheet" type="text/css">
+    <link href="../Assets/Css/cart.css" rel="stylesheet" type="text/css">
+    <link href="../Assets/Css/lightslider.css" rel="stylesheet" type="text/css">
+    <script src="../Assets/Js/bootstrap.min.js"></script>
+    <script src="../Assets/Js/jquery.ellipsis.js"></script>
+    <script src="../Assets/Js/jquery.jcarousel.min.js"></script>
+    <script src="../Assets/Js/jquery.min.js"></script>
+    <script src="../Assets/Js/jquery.vticker.min.js"></script>
+    <script src="../Assets/Js/jquery.validate.min.js"></script>
+    <script src="../Assets/Js/myJs.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('.main_menu_btn').click(function () {
+            $('#right_menu').toggleClass('show_right_menu');
+            $('#right_menu>ul').toggleClass('show_content');
+            $('.main_menu_overlay').toggleClass('on');
+            $('.menu_wrap').toggleClass('on_menu_wrap');
+        });
+
+        $('.main_menu_close').click(function () {
+            $('#right_menu').toggleClass('show_right_menu');
+            $('#right_menu>ul').toggleClass('show_content');
+            $('.main_menu_overlay').toggleClass('on');
+            $('.menu_wrap').toggleClass('on_menu_wrap');
+        });
+
+    });
+    </script>
+    <header style="height: 150px;">
+        <div class="container" style="position: relative">
+
+            <span class="main_menu_btn">
+                <i class="fa fa-2x fa-bars"></i>
+            </span>
+
+            <div class="headerLeft">
+                <div class="boxLogo">
+                    <a title="logo" href="http://www.alotraicay.com/">
+                        <img alt="FashionShop" src="../Assets/Images/biluxury.JPG">
+                    </a>
+                </div>
+            </div>
+            <div class="headerRight">
+                <div class="row">
+                    <div class="row hot_line_box col-lg-6 col-md-8">
+                        <div class="mobile">
+                            <i class="ico_mobile"></i>
+                            <div class="ico_text">
+                                <span>Hotline</span>
+                                <p><a href="tel:0983920884">0983920884</a></p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="email">
+                            <i class="ico_email"></i>
+                            <div class="ico_text">
+                                <span>Email liên hệ</span>
+                                <p><a href="mailto:hoanghai.itnuce@gmail.com">hoanghai.itnuce@gmail.com</a></p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="img" style="">
+                            <!--<i class="ico_img"></i>-->
+                            <a href="http://www.facebook.com/hoanghai.itnuce">
+                                <img src="../Assets/Images/cart_icon.png">
+                                <span>
+                                    0
+                                </span>
+                            </a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                    <div class="row row_search">
+                        <div class="box_seach col-lg-4 col-md-4 col-xs-12">
+                            <form action="http://www.facebook.com/hoanghai.itnuce" method="get">
+                                <div class="form-group">
+                                    <div style="display: none" class="col-lg-3 col-md-3 no_padding_r">
+                                        <select class="form-control cate" name="cate">
+                                            <option value="0">Tất cả danh mục</option>
+                                            <option value="19">Kết giỏ hoa tươi</option>
+                                            <option value="20">Nước ép hoa quả</option>
+                                            <option value="21">Thực phẩm khô</option>
+                                            <option value="22">Trái cây 3 miền</option>
+                                            <option value="23">Hoa quả nhập khẩu</option>
+                                            <option value="24">Nông sản sạch</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-8 no_padding_r no_padding_l">
+                                        <input placeholder="Nhập từ khóa...." class="form-control key" type="text" name="keyword">
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 no_padding_l no_padding_r">
+                                        <button type="submit" class="btn_seach"><i class="fa fa-search"></i></button>
+                                        <!--<button type="button" class="btn btn-default">-->
+                                        <!--<span class="glyphicon glyphicon-search"></span> Tìm kiếm-->
+                                        <!--</button>-->
+                                    </div>
+                                </div>
+                                <!--<div class="clearfix"></div>-->
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+                <div class="row">
+                    <nav id="menudrop">
+                        <ul>
+                            <li><a class="active" href="http://www.alotraicay.com/">Trang chủ</a></li>
+                            <li><a href="http://www.alotraicay.com/san-pham.html">Sản phẩm</a></li>
+                            <li>
+                                <a href="http://www.alotraicay.com/tin-tuc.html">Tin tức</a>
+                                <ul class="dropdown-menu">
+                                    <a href="/ho-tro.html">Hỗ trợ</a>
+                                    <li><a href="/cam-nang.html">Cẩm nang</a></li>
+                                    <li><a href="/tu-van.html">Tư vấn</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="http://www.alotraicay.com/gioi-thieu.html">Giới thiệu</a></li>
+                            <li><a href="http://www.alotraicay.com/lien-he.html">Liên hệ</a></li>
+                            <!--<li>
+                                 <a href="http://www.alotraicay.com/thanh-toan.html">
+                                     Giỏ hàng (0)
+                                 </a>
+                             </li>-->
+                            <li>
+                                <!--<a href="http://www.alotraicay.com/thanh-toan.html">-->
+                                <!--<img src="http://www.alotraicay.com/templates/images/cart_icon.png">-->
+                                <!--<span>-->
+                                <!--0                                </span>-->
+                                <!--</a>-->
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </nav>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </header>
+    <div class="container" style="padding-top: 10px;">
+        <div id="wrapper">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <script type="text/javascript">
+
+                    $(document).ready(function () {
+
+                        //box-support -------------------------------
+                        var cat = $('.product_cate>ul');
+                        $('.btn_cat').click(function (event) {
+
+                            event.preventDefault();
+                            // if the menu is visible slide it up
+                            if (cat.is(":visible"))
+                            {
+                                cat.slideUp(400);
+                                //$(this).removeClass("open");
+                            }
+                            // otherwise, slide the menu down
+                            else
+                            {
+                                cat.slideDown(400);
+                                //$(this).addClass("open");
+                            }
+                        });
+
+
+                        var sub = $('#sup_cate');
+                        $('.btn_sup').click(function (event) {
+                            event.preventDefault();
+                            if (sub.is(":visible")) {
+                                sub.hide(50);
+                                $('.btn_sup').css({'transform': 'rotate(90deg)'});
+
+                            } else {
+                                sub.show(10, 'swing');
+                                $('.btn_sup').css({'transform': 'rotate(-90deg)'});
+                            }
+                        });
+
+
+                    });
+                    </script>
+
+                    <div class="main_pro_cate">
+                        <div class="header_cate"><span class="btn_cat"><i class="fa fa-bars"></i></span>Danh mục</div>
+                        <div class="product_cate">
+                            <ul style="padding-left: 0px;">
+                                <li>
+                                    <a title="Áo Phông" href="">
+                                        <span>Áo Phông</span>
+                                        <div class="clearfix"></div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a title="Áo sơ mi" href="">
+                                        <span>Áo sơ mi</span>
+                                        <div class="clearfix"></div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a title="Áo thun" href="">
+                                        <span>Áo Thun</span>
+
+                                        <div class="clearfix"></div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a title="Áo len" href="">
+                                        <span>Áo Len</span>
+                                        <div class="clearfix"></div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a title="Áo khoác" href="">
+                                        <span>Áo khoác</span>
+                                        <div class="clearfix"></div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a title="Áo Vest" href="">
+                                        <span>Áo Vest</span>
+                                        <div class="clearfix"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Quần jeans" href="">
+                                        <span>Quần Jeans</span>
+                                        <div class="clearfix"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Quần Âu" href="">
+                                        <span>Quần Âu</span>
+                                        <div class="clearfix"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Quần kaki" href="">
+                                        <span>Quần Kaki</span>
+                                        <div class="clearfix"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Quần ngố" href="">
+                                        <span>Quần ngố</span>
+                                        <div class="clearfix"></div>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">	var cartColor=false;	var cartSize=true; </script>
+    <div id="main_body">
+        <script type="text/javascript"> setTimeout(function(){showBannerCatalogue()}, 10000); function showBannerCatalogue(){ $("#slider_left").hide(); $("#slider_right").hide(); $("#imgFreeShip").fadeIn(300); setTimeout(function(){hideBannerCatalogue()}, 10000); } function hideBannerCatalogue(){ $("#slider_left").show(); $("#slider_right").show(); $("#imgFreeShip").fadeOut(300); setTimeout(function(){showBannerCatalogue()}, 10000); } </script>
+        <div id="content_ct">
+            <div id="left_panel">
+                <div id="menu_left">
+                    <ul style="padding: 0;">
+                        <li class="header"> <a href="http://www.4-men.vn/ao-thun-nam/" title="Áo Thun Nam">Áo Thun Nam</a> </li>
+                        <li> <a href="http://www.4-men.vn/ao-thun-co-co/" title="Áo Thun Có Cổ">Áo Thun Có Cổ</a> </li>
+                        <li> <a href="http://www.4-men.vn/ao-thun-co-tron/" title="Áo Thun Cổ Tròn">Áo Thun Cổ Tròn</a> </li>
+                        <li> <a href="http://www.4-men.vn/ao-thun-co-tim/" title="Áo Thun Cổ Tim">Áo Thun Cổ Tim</a> </li>
+                        <li> <a href="http://www.4-men.vn/ao-thun-tay-dai/" title="Áo Thun Tay Dài">Áo Thun Tay Dài</a> </li>
+                        <li> <a href="http://www.4-men.vn/ao-thun-ba-lo/" title="Áo Thun Ba Lỗ">Áo Thun Ba Lỗ</a> </li>
+                    </ul>
+                </div>
+                <div class="left_box">
+                    <div class="header"> <a href="http://www.4-men.vn/thoi-trang-ban-chay.html" title="Thoi trang ban chạy">Thời trang bán chạy</a> </div>
+                    <div class="content product slider-left-product" style="width: 210px; height: 300px; overflow: hidden;">
+                        <ul style="width: 1422px; margin-left: -237px;">
+                            <li style="margin-left: -237px; float: left;">
+                                <a title="Áo sơ mi Trắng phối cổ Đỏ ASM550" href="http://www.4-men.vn/ao-so-mi-nam/ao-so-mi-trang-phoi-co-do-asm550-3657.html">
+                                    <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam3.jpg" alt="Ao so mi Trang phoi co Do ASM550"> <span>225.000 VND</span>
+                                </a>
+                            </li>
+                            <li style="float: left;">
+                                <a title="Áo Khoác Cardigan Xám Chuột Đậm AC083" href="http://www.4-men.vn/ao-khoac-nam/ao-khoac-cardigan-xam-chuot-dam-ac083-3740.html">
+                                    <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam3.jpg" alt="Ao Khoac Cardigan Xam Chuot Dam AC083"> <span>165.000 VND</span>
+                                </a>
+                            </li>
+                            <li style="float: left;">
+                                <a title="Quần Kaki Hàn Quốc Xanh Đen QK123" href="http://www.4-men.vn/quan-kaki-nam/quan-kaki-han-quoc-xanh-den-qk123-4562.html">
+                                    <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam3.jpg" alt="Quan Kaki Han Quoc Xanh Den QK123"> <span>195.000 VND</span>
+                                </a>
+                            </li>
+                            <li style="float: left;">
+                                <a title="Áo Sơ Mi Vàng Nhạt In Hoa ASM599" href="http://www.4-men.vn/ao-so-mi-nam/ao-so-mi-vang-nhat-in-hoa-asm599-4215.html">
+                                    <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam3.jpg" alt="Ao So Mi Vang Nhat In Hoa ASM599"> <span>180.000 VND</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <span id="prevBtn"><a href="javascript:void(0);"></a></span> <span id="nextBtn"><a href="javascript:void(0);"></a></span>
+                </div>
+                <div id="fixed_block_left" style="z-index: 999; margin-top: 20px">
+                    <div class="left_box">
+                        <div class="header"> <a href="http://www.4-men.vn/thoi-trang-moi-nhat.html" title="Thoi trang moi nhat">Thời trang mới nhất</a> </div>
+                        <div class="content product slider-left-product" style="width: 210px; height: 300px; overflow: hidden;">
+                            <a title="Áo Thun Có Cổ Màu Cafe AT589" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-mau-cafe-at589-6738.html">
+                                <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam3.jpg" alt="Ao Thun Co Co Mau Cafe AT589"> <span>215.000 VND</span>
+                            </a>
+
+                        </div>
+                        <span id="prevBtn"><a href="javascript:void(0);"></a></span> <span id="nextBtn"><a href="javascript:void(0);"></a></span>
+                    </div>
+                    <div class="left_box">
+                        <div class="header"> <a href="http://www.4-men.vn/khuyen-mai/" title="Thoi trang khuyen mai">Thời trang khuyến mãi</a> </div>
+                        <div class="content product slider-left-product" style="width: 210px; height: 300px; overflow: hidden;">
+                            <a title="Áo Sơ Mi Xanh Đen A278" href="http://www.4-men.vn/ao-so-mi-nam/ao-so-mi-xanh-den-a278-1616.html"> <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam3.jpg" alt="Ao So Mi Xanh Den A278"> <span>99.000 <span>150.000</span></span> </a> </li>
+                        </div>
+                        <span id="prevBtn"><a href="javascript:void(0);"></a></span>
+                        <span id="nextBtn"><a href="javascript:void(0);"></a></span>
+                    </div>
+                    <script type="text/javascript">	$(document).ready(function(){	$(".slider-left-product").easySlider({	auto: true,	continuous: true,	speed:1000,	pause:3000,	firstText:'',	nextText:	'',	prevText:	'',	prevId:	'prevBtn',	prevText:	'',	nextId:	'nextBtn',	nextText:	'',	controlsShow:	true,	controlsBefore:	'',	controlsAfter:	'',	controlsFade:	true,	firstId:	'firstBtn',	firstText:	'',	firstShow:	false,	lastId:	'lastBtn',	lastText:	'',	lastShow:	false,	vertical:	false,	numeric:	false,	numericId:	'controls'	});	}); </script>
+                </div>
+            </div>
+            <div id="right_panel">
+                <div class="box">
+                    <div class="detail form-horizontal " itemscope="" itemtype="http://data-vocabulary.org/Product">
+                        <meta itemprop="brand" content="4MEN">
+                        <meta itemprop="category" content="Áo Thun Nam &gt; Áo Thun Có Cổ">
+                        <meta itemprop="identifier" content="mpn:6520">
+                        <meta itemprop="description" content="Áo Thun Cá Sấu Đỏ Đô AT587 màu đỏ đô phối tắng trên vai áo cùng đường sọc trên thân áo. Thiết kế năng động... - SHOP 4MEN">
+                        <div class="thumb_img">
+                            <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/aothundo.jpg" alt="Ao Thun Ca Sau Do Do AT587" itemprop="image">
+                        </div>
+                        <div class="content_detail">
+                            <h1 itemprop="name">Áo Thun Cá Sấu Đỏ Đô AT587</h1>
+                            <div class="row_detail">
+                                <span class="label">Mã sản phẩm </span> <span class="value">AT587-DD</span>
+                                <div class="clr"></div>
+                            </div>
+                            <div class="row_detail">
+                                <span class="label">Màu sắc </span> <span class="value">Đỏ</span>
+                                <div class="clr"></div>
+                            </div>
+                            <div class="row_detail" itemprop="offerDetails" itemscope="" itemtype="http://data-vocabulary.org/Offer">
+                                <meta itemprop="priceCurrency" content="VND">
+                                <time itemprop="priceValidUntil" datetime="2019-03-18">
+                                    <meta itemprop="seller" content="Ngọc Năm">
+                                    <meta itemprop="condition" content="used">
+                                    <meta itemprop="availability" content="in_stock">
+                                    <span class="label">Giá bán </span> <span class="value"><sub style="float:right;line-height:26px; margin-left:5px;">VND</sub><span style="float:left;" itemprop="price">195.000</span> </span>
+                                    <div class="clr"></div>
+                                    <div class="clr"></div>
+                                </time>
+                            </div>
+                            <div class="row_detail">
+                                <span class="label">Chọn size</span>
+                                <span class="value" style="">
+                                    <select name="sizeSelect" id="sizeSelect" class="form-control input-sm" style="width:90px; float:left;">
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                        <option value="XXL">XXL</option>
+                                    </select>
+                                    <input type="hidden" id="sizeChoice" value="M"> <br> <a href="http://www.4-men.vn/huong-dan-chon-size.html" title="Huong dan chong size" style="float:left; margin:5px; font-size:12px; color:#b1def5; font-weight:bold;"> » Hướng dẫn chọn size</a>
+                                    <div class="clr"></div>
+                                </span>
+                                <div class="clr"></div>
+                                <span class="label">Số lượng</span> <span class="value"> <input class="form-control input-sm" style="width:90px; text-align:center;" type="number" min="1" max="10" value="1" id="quantityBuy"></span>
+                                <div class="clr"></div>
+                            </div>
+                            <div class="row_detail">
+                                <input type="button" id="buyNow" rel="6520" class="btn btn-warning" value="Mua ngay" style="width:40%;text-transform:uppercase;font-weight:bold; margin-right:15px;"> <a href="http://www.4-men.vn/#" id="addToCart" rel="6520" style="font-weight:bold;color:#5cb85c; font-size:14px;"> + Thêm vào giỏ hàng</a>
+                                <div class="clr" style="height:15px;"></div>
+                                <div class="label addressSize" id="addressM" style="display:block; width:100%; background:#000;font-size:12px !important;">	79 Lê Văn Sỹ, P.13, Q.Phú Nhuận, Tp.HCM<br>526 Quang Trung, P.11, Q.Gò Vấp,Tp.HCM<br>798 Cách Mạng Tháng 8, P.5, Q.Tân Bình, Tp.HCM<br> <em>(Ngoài những địa chỉ mua hàng trực tiếp<br> 4MEN còn có hình thức Giao Hàng Tận Nhà và Thu Tiền)</em> </div>
+                                <div class="label addressSize" id="addressL" style="display:none; width:100%; background:#000;font-size:12px !important;">	79 Lê Văn Sỹ, P.13, Q.Phú Nhuận, Tp.HCM<br>526 Quang Trung, P.11, Q.Gò Vấp,Tp.HCM<br>798 Cách Mạng Tháng 8, P.5, Q.Tân Bình, Tp.HCM<br> <em>(Ngoài những địa chỉ mua hàng trực tiếp<br> 4MEN còn có hình thức Giao Hàng Tận Nhà và Thu Tiền)</em> </div>
+                                <div class="label addressSize" id="addressXL" style="display:none; width:100%; background:#000;font-size:12px !important;">	79 Lê Văn Sỹ, P.13, Q.Phú Nhuận, Tp.HCM<br>526 Quang Trung, P.11, Q.Gò Vấp,Tp.HCM<br>798 Cách Mạng Tháng 8, P.5, Q.Tân Bình, Tp.HCM<br> <em>(Ngoài những địa chỉ mua hàng trực tiếp<br> 4MEN còn có hình thức Giao Hàng Tận Nhà và Thu Tiền)</em> </div>
+                                <div class="label addressSize" id="addressXXL" style="display:none; width:100%; background:#000;font-size:12px !important;">	79 Lê Văn Sỹ, P.13, Q.Phú Nhuận, Tp.HCM<br>526 Quang Trung, P.11, Q.Gò Vấp,Tp.HCM<br>798 Cách Mạng Tháng 8, P.5, Q.Tân Bình, Tp.HCM<br> <em>(Ngoài những địa chỉ mua hàng trực tiếp<br> 4MEN còn có hình thức Giao Hàng Tận Nhà và Thu Tiền)</em> </div>
+                                <div class="clr" style="height:15px;"></div>
+                                <span class="call_me">&nbsp;</span> <span class="value">	0972.546.473 - (08) 62.719.692 </span>
+                                <div class="clr"></div>
+                            </div>di
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="item-nav">
+                            <div class="header-tabs">
+                                <ul>
+                                    <li class="active" style="width:200px;"> <a href="http://www.4-men.vn/ao-thun-nam/ao-thun-ca-sau-do-do-at587-6520.html" title="Áo Thun Cá Sấu Đỏ Đô AT587">Chi tiết sản phẩm</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail_ct" style="min-height:740px; background:#FBFBFB; color:#333;">
+                            <div style="text-align: justify;">
+                                <strong>Áo Thun Cá Sấu Đỏ Đô AT587</strong>
+                                <br> - Màu đỏ đô phối tắng&nbsp;trên vai áo cùng đường sọc trên thân áo.
+                                <br> - Thiết kế năng động với cổ bẻ, tay ngắn phối sọc độc đáo
+                                <br> - Chất liệu thun cá sấu mềm mại, co giãn tốt, tạo sự thoải mái khi mặc
+                                <br> - Form ôm body giúp tôn dáng và hình thể khỏe khoắn
+                                <br> - Họa tiết xe đạp sử dụng công nghệ in cao được in nổi bật bên ngực phải áo
+                                <br> - Thiết kế và sản xuất bởi 4MEN
+                                <br> Mỗi chàng trai sẽ có vóc dáng, chiều cao cân nặng khác nhau. Vì vậy việc lựa chọn một chiếc áo phông nam đẹp và phù hợp nhất cho mỗi người không hề đơn giản. 4MEN giới thiệu đến bạn những chiếc&nbsp;áo phông ưng ý và đẹp nhất phù hợp với người có vóc dáng,&nbsp;dù cho người&nbsp;có người béo, người gầy, người cân đối vẫn có thể diện được.&nbsp;Chiếc áo thun cá sấu này giúp bạn&nbsp;khéo léo&nbsp;che đi khuyết điểm và tôn lên vóc dáng của mình.
+                            </div>
+                            <div style="text-align: center;">   <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam1.jpg" alt="Ao Thun Ca Sau Do Do AT587 " alt="Áo thun cá sấu đỏ đô at587 - 1"></div>
+                            <div style="text-align: justify;">
+                                <br> Áo thun cá sấu đỏ đô&nbsp;AT587&nbsp;form áo ôm body khỏe khoắn cùng họa tiết xe đạp được in cao bên ngực áo tạo điểm nhấn riêng biệt cùng&nbsp;gam màu đỏ đô nổi bật&nbsp;phối trắng&nbsp;ở vai áo, cùng các đường sọc ngang trên áo tạo điểm nhấn cũng như sự năng động, độc đáo và cá tính cho người mặc cũng như sản phẩm. Thêm vào đó, thiết kế cổ bẻ, phối màu, giữa áo có hàng nút dọc, tùy theo sở thích, hoàn cảnh các bạn có thể cài hoặc tháo nút. Chất liệu thun cá sấu mềm mại, thoáng mát, đem lại sự dễ chịu cho người mặc trong mọi&nbsp;thời tiết.
+                            </div>
+                            <div style="text-align: center;">   <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam2.jpg" alt="Ao Thun Ca Sau Do Do AT587" alt="Áo thun cá sấu đỏ đô at587 - 2"></div>
+                            <div style="border-top:1px solid #999; margin-top:10px;">
+                                <span>Từ khóa <a href="http://www.4-men.vn/thoi-trang/" title="Thoi trang">thời trang</a>:</span>
+                                <div class="tags" style="border-top:none;">
+                                    <a href="http://www.4-men.vn/thoi-trang/ao-co-tru/" title="áo cổ trụ">áo cổ trụ</a>
+                                    <a href="http://www.4-men.vn/thoi-trang/ao-co-tru-nam/" title="áo cổ trụ nam">áo cổ trụ nam</a>
+                                    <a href="http://www.4-men.vn/thoi-trang/ao-nam-co-tru/" title="áo nam cổ trụ">áo nam cổ trụ</a>
+                                    <a href="http://www.4-men.vn/thoi-trang/ao-phong-polo/" title="áo phông polo">áo phông polo</a>
+                                    <a href="http://www.4-men.vn/thoi-trang/ao-phong-polo-nam/" title="áo phông polo nam">áo phông polo nam</a>
+                                    <a href="http://www.4-men.vn/thoi-trang/ao-thun-co-be/" title="áo thun cổ bẻ">áo thun cổ bẻ</a>
+                                    <a href="http://www.4-men.vn/thoi-trang/ao-thun-co-co-nam-dep/" title="áo thun có cổ nam đẹp">áo thun có cổ nam đẹp</a>
+                                    <a href="http://www.4-men.vn/thoi-trang/ao-thun-nam-body-co-co/" title="áo thun nam body có cổ">áo thun nam body có cổ</a>
+                                    <a href="http://www.4-men.vn/thoi-trang/ao-thun-nam-co-be/" title="áo thun nam cổ bẻ">áo thun nam cổ bẻ</a>
+                                    <a href="http://www.4-men.vn/thoi-trang/ao-thun-nam-co-co-gia-re/" title="áo thun nam có cổ giá rẻ">áo thun nam có cổ giá rẻ</a>
+                                    <div class="clr"></div>
+                                </div>
+                            </div>
+
+                            <div class="navigationLinks">
+                                <a class="prev" href="http://www.4-men.vn/ao-thun-nam/ao-thun-ca-sau-xanh-den-at587-6519.html" title="Áo Thun Cá Sấu Xanh Đen AT587">Áo Thun Cá Sấu Xanh Đen AT587</a>
+                                <a class="next" href="http://www.4-men.vn/ao-thun-nam/ao-thun-ca-sau-trang-kem-at587-6521.html" title="Áo Thun Cá Sấu Trắng Kem AT587">Áo Thun Cá Sấu Trắng Kem AT587</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                <div class="cln"></div>
+            </div>
+            <div id="stop-float-fixed">
+            </div>
+            <div class="item-nav">
+                <div class="header-tabs">
+                    <ul>
+                        <li class="active" style="width:210px;"> <a href="http://www.4-men.vn/ao-thun-co-co/" title="Áo Thun Có Cổ">Sản phẩm cùng chuyên mục</a> </li>
+                    </ul>
+                </div>
+                <div class="content-items">
+                    <div have-size="1" in-stock="1" product="6742">
+                        <a class="frame" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xanh-da-troi-at589-6742.html" title=""><span>Chi tiết</span><span class="buyNow" rel="6742">Mua ngay</span></a><a rel="6742" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xanh-da-troi-at589-6742.html">
+                            <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam15.jpg" alt="Ao Thun Co Co Xanh Da Troi AT589" style="height: 257.333px;">
+                        </a>
+                        <a href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xanh-da-troi-at589-6742.html" title="Áo Thun Có Cổ Xanh Da Trời AT589">
+                            <h2>Áo Thun Có Cổ Xanh Da Trời AT589</h2>
+                        </a>
+                        <p align="center"><span>215.000 VND</span></p>
+                    </div>
+                    <div have-size="1" in-stock="1" product="6741">
+                        <a class="frame" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xanh-la-cay-at589-6741.html" title=""><span>Chi tiết</span><span class="buyNow" rel="6741">Mua ngay</span></a><a rel="6741" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xanh-la-cay-at589-6741.html">
+                            <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam12.jpg" alt="Ao Thun Co Co Xanh La Cay AT589" style="height: 257.333px;">
+                        </a>
+                        <a href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xanh-la-cay-at589-6741.html" title="Áo Thun Có Cổ Xanh Lá Cây AT589">
+                            <h2>Áo Thun Có Cổ Xanh Lá Cây AT589</h2>
+                        </a>
+                        <p align="center"><span>215.000 VND</span></p>
+                    </div>
+                    <div have-size="1" in-stock="1" product="6740">
+                        <a class="frame" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-tim-at589-6740.html" title=""><span>Chi tiết</span><span class="buyNow" rel="6740">Mua ngay</span></a><a rel="6740" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-tim-at589-6740.html">
+                            <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam12.jpg" alt="Ao Thun Co Co Tim AT589" style="height: 257.333px;">
+                        </a>
+                        <a href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-tim-at589-6740.html" title="Áo Thun Có Cổ Tím AT589">
+                            <h2>Áo Thun Có Cổ Tím AT589</h2>
+                        </a>
+                        <p align="center"><span>215.000 VND</span></p>
+                    </div>
+                    <div have-size="1" in-stock="1" product="6739">
+                        <a class="frame" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xam-chuot-at589-6739.html" title=""><span>Chi tiết</span><span class="buyNow" rel="6739">Mua ngay</span></a><a rel="6739" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xam-chuot-at589-6739.html">
+                            <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/ao-thun-ca-sau-do-do-at587-6520-slide-1.jpg" alt="Ao Thun Co Co Xam Chuot AT589" style="height: 257.333px;">
+                        </a>
+                        <a href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xam-chuot-at589-6739.html" title="Áo Thun Có Cổ Xám Chuột AT589">
+                            <h2>Áo Thun Có Cổ Xám Chuột AT589</h2>
+                        </a>
+                        <p align="center"><span>215.000 VND</span></p>
+                    </div>
+                    <div have-size="1" in-stock="1" product="6738">
+                        <a class="frame" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-mau-cafe-at589-6738.html" title=""><span>Chi tiết</span><span class="buyNow" rel="6738">Mua ngay</span></a><a rel="6738" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-mau-cafe-at589-6738.html">
+                            <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam15.jpg" alt="Ao Thun Co Co Mau Cafe AT589" style="height: 257.333px;">
+                        </a>
+                        <a href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-mau-cafe-at589-6738.html" title="Áo Thun Có Cổ Màu Cafe AT589">
+                            <h2>Áo Thun Có Cổ Màu Cafe AT589</h2>
+                        </a>
+                        <p align="center"><span>215.000 VND</span></p>
+                    </div>
+                    <div have-size="1" in-stock="1" product="6737">
+                        <a class="frame" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xam-chuot-dam-at589-6737.html" title=""><span>Chi tiết</span><span class="buyNow" rel="6737">Mua ngay</span></a><a rel="6737" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xam-chuot-dam-at589-6737.html">
+                            <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam2.jpg" alt="Ao Thun Co Co Xam Chuot Dam AT589" style="height: 257.333px;">
+                        </a>
+                        <a href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xam-chuot-dam-at589-6737.html" title="Áo Thun Có Cổ Xám Chuột Đậm AT589">
+                            <h2>Áo Thun Có Cổ Xám Chuột Đậm AT589</h2>
+                        </a>
+                        <p align="center"><span>215.000 VND</span></p>
+                    </div>
+                    <div have-size="1" in-stock="1" product="6736">
+                        <a class="frame" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xam-xanh-at589-6736.html" title=""><span>Chi tiết</span><span class="buyNow" rel="6736">Mua ngay</span></a><a rel="6736" href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xam-xanh-at589-6736.html">
+                            <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam4.jpg" alt="Ao Thun Co Co Xam Xanh AT589" style="height: 257.333px;">
+                        </a>
+                        <a href="http://www.4-men.vn/ao-thun-nam/ao-thun-co-co-xam-xanh-at589-6736.html" title="Áo Thun Có Cổ Xám Xanh AT589">
+                            <h2>Áo Thun Có Cổ Xám Xanh AT589</h2>
+                        </a>
+                        <p align="center"><span>215.000 VND</span></p>
+                    </div>
+                    <div in-stock="1" product="6532">
+                        <a class="frame" href="http://www.4-men.vn/ao-thun-nam/ao-thun-ca-sau-trang-kem-at586-6532.html" title=""><span>Chi tiết</span><span class="buyNow" rel="6532">Mua ngay</span></a><a rel="6532" href="http://www.4-men.vn/ao-thun-nam/ao-thun-ca-sau-trang-kem-at586-6532.html">
+                            <img src="../Assets/Images/ShoeShopImages/FashionMen/Ao/Aothun/thunnam5.jpg" alt="Ao Thun Ca Sau Trang Kem AT586" style="height: 257.333px;">
+                        </a>
+                        <a href="http://www.4-men.vn/ao-thun-nam/ao-thun-ca-sau-trang-kem-at586-6532.html" title="Áo Thun Cá Sấu Trắng Kem AT586">
+                            <h2>Áo Thun Cá Sấu Trắng Kem AT586</h2>
+                        </a>
+                        <p align="center"><span>195.000 VND</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer_page">
+        <div class="page_body">
+            <div>	Nhãn hiệu "QHG" đã được đăng kí độc quyền tại Cục sở hữu trí tuệ Việt Nam </div>
+            <div class="footer_link">
+                <div class="footer_link_left">
+                    <ul>
+                        <li class="header"> Về 4MEN </li>
+                        <li><a href="http://www.4-men.vn/gioi-thieu.html" title="Gioi thieu 4men">Giới thiệu</a></li>
+                        <li><a href="http://www.4-men.vn/lien-he.html" title="Lien he shop thoi trang 4men">Liên hệ</a></li>
+                        <li><a href="http://www.4-men.vn/tuyen-dung.html" title="Tin tuyen dung 4men">Tuyển dụng</a></li>
+                        <li><a href="http://www.4-men.vn/chinh-sach-bao-mat.html" title="Chinh sach bao mat 4men">Chính sách bảo mật</a></li>
+                        <li><a href="http://www.4-men.vn/khuyen-mai/" title="khuyen mai">Khuyến mãi</a></li>
+                        <li><a href="http://www.4-men.vn/shop-ban-quan-jean-nam/" title="shop ban quan jean nam">Shop bán quần jean nam</a></li>
+                        <li><a href="http://www.4-men.vn/shop-ao-thun-nam/" title="shop ao thun nam">Shop áo thun nam</a></li>
+                        <li><a href="http://www.4-men.vn/ao-so-mi-nam-ha-noi/" title="ao so mi nam ha noi">Áo sơ mi nam Hà Nội</a></li>
+                    </ul>
+                </div>
+                <div class="footer_link_left">
+                    <ul>
+                        <li class="header"> HỖ TRỢ KHÁCH HÀNG </li>
+                        <li><a href="http://www.4-men.vn/dat-hang-truc-tuyen.html" title="Huong dan dat hang">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="http://www.4-men.vn/huong-dan-chon-size.html" title="Huong dan chon size">Hướng dẫn chọn size</a></li>
+                        <li><a href="http://www.4-men.vn/chinh-sach-giao-hang.html" title="Chinh sach giao hang">Chính sách giao hàng</a></li>
+                        <li><a href="http://www.4-men.vn/chinh-sach-doi-hang.html" title="Chinh sach doi hang">Chính sách đổi hàng</a></li>
+                        <li><a href="http://www.4-men.vn/chinh-sach-khach-vip.html" title="Chinh sach khach vip">Chính sách khách vip</a></li>
+                        <li><a href="http://www.4-men.vn/cau-hoi-thuong-gap.html" title="Cau hoi thuong gap">Câu hỏi thường gặp</a></li>
+                        <li><a href="http://www.4-men.vn/ban-si-quan-ao.html" title="Ban si quan ao">Bán sỉ quần áo</a></li>
+                    </ul>
+                </div>
+                <div class="footer_link_right">
+                    <ul>
+                        <li class="header"> HỆ THỐNG CỬA HÀNG <span style="display:block; float:right;">Giờ làm việc: 8h30 - 22h</span> </li>
+                        <li>798 Cách Mạng Tháng 8, P.5, Q. Tân Bình, TP.HCM<span class="right">0975 215 734</span></li>
+                        <li>526 Quang Trung, P.11, Q.Gò Vấp, TP.HCM<span class="right">0989 83 06 85</span></li>
+                        <li>79 Lê Văn Sỹ, P.13, Q. Phú Nhuận, Tp.HCM<span class="right">01226 910 881</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clr"></div>
+            <div> <span style="float:left;padding-top:10px;">	Chủ quản: ông Hồ Sỹ Quyết. MST cá nhân: 0988945306<br></span> </div>
+            <div class="clr"></div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
