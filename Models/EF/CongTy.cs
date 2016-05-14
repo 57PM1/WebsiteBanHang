@@ -9,10 +9,8 @@ namespace Models.EF
     [Table("CongTy")]
     public partial class CongTy
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
-        [Required]
         [StringLength(200)]
         public string Name { get; set; }
 
