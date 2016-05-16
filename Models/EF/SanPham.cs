@@ -9,7 +9,12 @@ namespace Models.EF
     [Table("SanPham")]
     public partial class SanPham
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SanPham()
+        {
+            ChiTietDatHangs = new HashSet<ChiTietDatHang>();
+        }
+
         public int ID { get; set; }
 
         [StringLength(250)]
@@ -41,7 +46,6 @@ namespace Models.EF
 
         public long? Quantity { get; set; }
 
-        [Column(TypeName = "date")]
         public DateTime? Date { get; set; }
 
         public int? Order { get; set; }
@@ -65,8 +69,11 @@ namespace Models.EF
 
         public int? Status { get; set; }
 
-        public DateTime? TopHot { get; set; }
+        public bool TopHot { get; set; }
 
         public int? ViewCount { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietDatHang> ChiTietDatHangs { get; set; }
     }
 }
