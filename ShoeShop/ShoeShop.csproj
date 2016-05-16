@@ -246,14 +246,15 @@
     <Compile Include="Areas\admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\admin\Controllers\NhomSanPhamController.cs" />
-    <Compile Include="Areas\admin\Controllers\SanPhamsController.cs" />
     <Compile Include="Areas\admin\Models\LoginModel.cs" />
     <Compile Include="Areas\admin\Models\NhomSanPhamModel.cs" />
     <Compile Include="Common\CommonConstant.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HoaDonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PageController.cs" />
+    <Compile Include="Models\HoaDonViewModel.cs" />
     <Compile Include="Models\HomePageViewModel.cs" />
     <Compile Include="Shared\errorCode.cs" />
     <Compile Include="Global.asax.cs">
@@ -927,11 +928,6 @@
     <Content Include="Areas\admin\Plugins\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Areas\admin\Plugins\ckfinder\userfiles\.htaccess" />
     <Content Include="Areas\admin\Views\NhomSanPham\Edit.cshtml" />
-    <Content Include="Areas\admin\Views\SanPhams\Create.cshtml" />
-    <Content Include="Areas\admin\Views\SanPhams\Delete.cshtml" />
-    <Content Include="Areas\admin\Views\SanPhams\Details.cshtml" />
-    <Content Include="Areas\admin\Views\SanPhams\Edit.cshtml" />
-    <Content Include="Areas\admin\Views\SanPhams\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -987,6 +983,7 @@
     <Content Include="Views\Home\phukien.cshtml" />
     <Content Include="Views\Shared\Partial\Header.cshtml" />
     <Content Include="Views\Shared\Partial\Footer.cshtml" />
+    <Content Include="Views\HoaDon\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -997,6 +994,9 @@
     <Folder Include="Assets\Content\Images\" />
     <Folder Include="Assets\Content\Js\" />
     <Folder Include="Assets\Images\" />
+    <Folder Include="Assets\LT\css\" />
+    <Folder Include="Assets\LT\img\" />
+    <Folder Include="Assets\LT\js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

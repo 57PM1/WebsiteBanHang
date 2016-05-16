@@ -14,5 +14,6 @@ namespace ShoeShop.Models
         public Slider Slider { get; set; }
         public IEnumerable<Menu> Menus { get; set; }
         public LienHe Lienhe { get; set; }
+        public IEnumerable<SanPham> SanPhamNoiBat { set; get; }
     }
 }

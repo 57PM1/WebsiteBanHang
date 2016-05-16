@@ -106,12 +106,12 @@
                                                     <li><a href="/admin/NhomSanPham/Edit/@item.Id">Chỉnh sửa</a></li>
                                                     <li>|</li>
                                                     <li>
-                                                        @Ajax.ActionLink("Xóa", "Delete", new { @id = item.Id }, new AjaxOptions
-                                                   {
-                                                       Confirm = "Bạn có thực sự muốn xóa không?",
-                                                       OnComplete = "$(#row_" + item.Id + "').remove()",
-                                                       HttpMethod = "Delete"
-                                                   })
+                                                    @Ajax.ActionLink("Xóa", "Delete", new { @id = item.Id }, new AjaxOptions
+                                                    {
+                                                        Confirm = "Bạn có thực sự muốn xóa không?",
+                                                        OnComplete = "$(#row_" + item.Id + "').remove()",
+                                                        HttpMethod = "Delete"
+                                                    })
                                                 <li>|</li>
                                                 <li><a href="?atc=see">Xem</a></li>
                                             </ul>

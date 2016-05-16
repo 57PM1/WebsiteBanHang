@@ -51,6 +51,7 @@ namespace ShoeShop.Controllers
         {
             model.Danhmucsanphams = new NhomsanphamDao().ListAll();
             return View(model);
+
         }
     }
 }

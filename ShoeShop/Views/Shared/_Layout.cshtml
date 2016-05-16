@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model ShoeShop.Models.HomePageViewModel
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -24,115 +25,123 @@
     <script src="~/Assets/Content/Js/jquery.validate.min.js"></script>
     <script src="~/Assets/Content/Js/jquery.vticker.min.js"></script>
     <script src="~/Assets/Content/Js/myJs.js"></script>
+    <link href="~/Assets/LT/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/AdminLTE.css" rel="stylesheet" />
+    <script src="~/Assets/LT/js/app.js"></script>
+    <script src="~/Assets/LT/js/app.min.js"></script>
+    <script src="~/Assets/LT/js/demo.js"></script>
+    <link href="~/Assets/LT/css/skins/_all-skins.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/_all-skins.min.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-black-light.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-black-light.min.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-black.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-black.min.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-blue-light.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-blue-light.min.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-blue.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-blue.min.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-green-light.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-green-light.min.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-green.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-green.min.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-purple-light.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-purple-light.min.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-purple.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-purple.min.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-red-light.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-red-light.min.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-red.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-red.min.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-yellow-light.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-yellow-light.min.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-yellow.css" rel="stylesheet" />
+    <link href="~/Assets/LT/css/skins/skin-yellow.min.css" rel="stylesheet" />
 </head>
 <body>   
-    <header style="height: 150px;">
-        <div class="container" style="position: relative">
+    <div class="row" id="sns_header">
+        <div class="col-sm-3">
+            <div class="boxLogo">
+                <a title="logo" href="#">
+                    <img alt="FashionShop" src="~/Assets/Content/Images/biluxury.JPG">
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-md-7" id="search-b">
+                    <div class="search-form">
+                        <form method="get" action="">
+                            <div class="col-sm-10" id="search-box">
+                                <input type="text" class="input-search" placeholder="&nbsp; &nbsp; Tìm sản phẩm bạn mong muốn...">
+                            </div>
+                            <div class="col-sm-2" id="btn-s">
+                                <input type="hidden" name="post_type" value="product">
+                                <button class="btn-s" type="submit"><i class="glyphicon glyphicon-search"></i>&nbsp; Tìm kiếm</button>
+                            </div>
 
-            <span class="main_menu_btn">
-                <i class="fa fa-2x fa-bars"></i>
-            </span>
-
-            <div class="headerLeft">
-                <div class="boxLogo">
-                    <a title="logo" href="http://www.alotraicay.com/">
-                        <img alt="FashionShop" src="~/Assets/Content/Images/biluxury.JPG">
-                    </a>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="col-md-8" id="contact" style="margin-left:20px;">
+                        <div class="col-sm-3 img-circle" style="background: #f86f00; color: white">
+                            <div class="text-center" id="phone-ic"><i class="glyphicon glyphicon-phone-alt"></i></div>
+                        </div>
+                        <div class="col-sm-9" id="phone-num"><span class="">0988945306</span></div>
+                    </div>
+                    <div class="col-sm-3" id="shop-cart">
+                        <a href="#">
+                            <div class="sns-shopping-cart-icon icon_cart">
+                                <span name="qtyTotalBuy" class="counter">
+                                    <b>3</b>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="headerRight">
-                <div class="row">
-                    <div class="row hot_line_box col-lg-6 col-md-8">
-                        <div class="mobile">
-                            <i class="ico_mobile"></i>
-                            <div class="ico_text">
-                                <span>Hotline</span>
-                                <p><a href="tel:0983920884">0983920884</a></p>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="email">
-                            <i class="ico_email"></i>
-                            <div class="ico_text">
-                                <span>Email liên hệ</span>
-                                <p><a href="mailto:hoanghai.itnuce@gmail.com">hoanghai.itnuce@gmail.com</a></p>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
+        </div>
+    </div>
+    <nav class="row">
+        <div class="col-sm-2" id="cate">
+            <div class="header_cate"><span class="btn_cat"><i class="glyphicon glyphicon-align-justify"></i></span>Danh mục sản phẩm</div>
+        </div>
+        <div>
 
-                        <div class="img" style="">
-                            <!--<i class="ico_img"></i>-->
-                            <a href="http://www.facebook.com/hoanghai.itnuce">
-                                <img height="40" width="40" src="~/Assets/Content/Images/cart_icon.png">
-                                <span>
-                                    0
-                                </span>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-sm-2" id="cate">
+            <div class="main_pro_cate">
+                <div class="product_cate">
+                    <ul style="padding-left: 0px;">
+                    @foreach (var cate in Model.Danhmucsanphams)
+                    {
+                        <li>
+                            <a title="@cate.MetaTitle" href="">
+                                <span>@cate.Name</span>
+                                <div class="clearfix"></div>
                             </a>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-
-                    <div class="row row_search">
-                        <div class="box_seach col-lg-4 col-md-4 col-xs-12">
-                            <form action="http://www.facebook.com/hoanghai.itnuce" method="get">
-                                <div class="form-group">
-                                    <div style="display: none" class="col-lg-3 col-md-3 no_padding_r">
-                                        <select class="form-control cate" name="cate">
-                                            <option value="0">Tất cả danh mục</option>
-                                            <option value="19">Kết giỏ hoa tươi</option>
-                                            <option value="20">Nước ép hoa quả</option>
-                                            <option value="21">Thực phẩm khô</option>
-                                            <option value="22">Trái cây 3 miền</option>
-                                            <option value="23">Hoa quả nhập khẩu</option>
-                                            <option value="24">Nông sản sạch</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-8 no_padding_r no_padding_l">
-                                        <input placeholder="Nhập từ khóa...." class="form-control key" type="text" name="keyword">
-                                    </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 no_padding_l no_padding_r">
-                                        <button type="submit" class="btn_seach"><i class="glyphicon glyphicon-search"></i></button>
-                                    </div>
-                                </div>
-                                <!--<div class="clearfix"></div>-->
-                            </form>
-                        </div>
-                    </div>
-
+                        </li>
+                    }
+                    </ul>
                     <div class="clearfix"></div>
                 </div>
-                <div class="row">
-                    <nav id="menudrop">
-                        <ul>
-                            <li><a class="active" href="http://www.alotraicay.com/">Trang chủ</a></li>
-                            <li><a href="http://www.alotraicay.com/san-pham.html">Sản phẩm</a></li>
-                            <li>
-                                <a href="http://www.alotraicay.com/tin-tuc.html">Tin tức</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="/ho-tro.html">Hỗ trợ</a></li>
-                                    <li><a href="/cam-nang.html">Cẩm nang</a></li>
-                                    <li><a href="/tu-van.html">Tư vấn</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="http://www.alotraicay.com/gioi-thieu.html">Giới thiệu</a></li>
-                            <li><a href="http://www.alotraicay.com/lien-he.html">Liên hệ</a></li>
-                            <li>
-                            </li>
-                        </ul>
-                        <div class="clearfix"></div>
-                    </nav>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </header>
+                <div class="clearfix"></div>
 
-    <div class="body-slider" style="margin-bottom: 0px;">
-        @RenderSection("slider", required: false)
+            </div>
+
+        </div>
+        <div class="thumbnail body-slider">
+            @RenderSection("slider", required: false)
+        </div>
     </div>
-    <div class="body-content" style="background: #f8f6f6; min-height: 800px; margin-top: 0px !important; ">
-        @RenderBody()    
+    <div class="wrap">
+        <div class="container">
+            @RenderBody()
+        </div>
     </div>
+    
     <footer>
         <div class="container">
             <div class="row">
@@ -145,8 +154,6 @@
                             <strong>Chi nhánh</strong>Phủ lý, Hà Nam
                         </p>
                     </div><!--End Box-->
-                    <div style="float: right" class="fb-follow fb_iframe_widget" data-href="https://www.facebook.com/hoanghai.itnucey" data-layout="standard" data-show-faces="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Fnongsantraicay&amp;layout=standard&amp;locale=en_US&amp;sdk=joey&amp;show_faces=true"><span style="vertical-align: bottom; width: 450px; height: 25px;"><iframe name="f398855d99b96c" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:follow Facebook Social Plugin" src="./Cửa hàng Trái Cây tươi chuyên các mặt hàng qua quả ngon, nông sản an toàn_files/follow.html" style="border: none; visibility: visible; width: 450px; height: 25px;" class=""></iframe></span></div>
-                    <div class="clearfix"></div>
                 </div>
             </div>
         </div>

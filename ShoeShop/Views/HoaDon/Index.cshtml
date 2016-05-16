@@ -1,0 +1,40 @@
+﻿@model ShoeShop.Models.HoaDonViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="thumbnail">
+    <div class="box box-warning">
+        <div class="box-header with-border">
+            <h3 class="box-title">Hóa đơn đặt hàng</h3>
+        </div><!-- /.box-header -->
+        <div class="box-body">
+            <form role="form">
+                <!-- text input -->
+                <div class="form-group">
+                    <label>Họ tên</label>
+                    <input type="text" class="form-control" placeholder="Nhập ...">
+                </div>
+                <div class="form-group">
+                    <label>Địa chỉ Email</label>
+                    <input type="text" class="form-control" placeholder="Nhập ...">
+                </div>
+
+                <!-- textarea -->
+                <div class="form-group">
+                    <label>Số điện thoại</label>
+                    <input type="text" class="form-control" placeholder="Nhập ...">
+                </div>
+                <div class="form-group">
+                    <label>Địa chỉ</label>
+                    <input type="text" class="form-control" placeholder="Nhập ...">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Thanh toán"/>
+                </div>
+            </form>
+        </div><!-- /.box-body -->
+    </div>
+
+</div>
+
