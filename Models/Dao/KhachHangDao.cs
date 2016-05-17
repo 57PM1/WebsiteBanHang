@@ -69,7 +69,7 @@ namespace Models.Dao
         }
         public IPagedList<KhachHang> ListAll(int page, int pageSize)
         {
-            return db.KhachHangs.OrderByDescending(o => o.Name).ToPagedList(page, pageSize);
+            return db.KhachHangs.OrderByDescending(o => o.ID).ToPagedList(page, pageSize);
         }
         public IEnumerable<KhachHang> ListAll()
         {

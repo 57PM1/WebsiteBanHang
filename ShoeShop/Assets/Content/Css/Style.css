@@ -581,6 +581,9 @@ nav>ul>li>a {
     border-bottom: 1px dashed rgba(0, 0, 0, 0.09);
     border-top: 1px dashed transparent;
 }
+.product_grid>li>a>img:hover {
+    opacity: 0.6;
+}
 .product_cate>ul>li>a {
     font-size: 13px;
     padding: 10px 15px;
@@ -651,7 +654,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 .title_product_hot {
     width: 20%;
-    background: #000;
+    position: relative;
+    padding: 12px;
+    background-color: #105aa6;
     color:white;
     text-align: center;
     padding: 8px 0;
@@ -662,7 +667,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: tahoma;
     letter-spacing: 2px;
     -moz-border-radius-topright: 4px;
-
+    max-height: 30px;
 
 }
 .product_grid {
@@ -1030,4 +1035,56 @@ ul{
 }
 .product-content{
     border: 1px solid #333;
+}
+.btn-shopping-cart>a{
+    color: white;
+    font-family: Arial;
+    font-size: 16px;
+}
+.product_name{
+    font-size: 19px;
+    color: black;
+    font-family: Arial;
+}
+
+.Tophot h2{
+    position: relative;
+    padding: 12px;
+    background-color: #105aa6;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align:center;
+}
+.Tophot h2:after{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 39px 0 39px 8px;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-top: -39px;
+    right: -8px;
+    top: 50%;
+    border-color: transparent #105aa6;
+    left: 100%;
+    border-width: 24px 0 24px 8px;
+    margin-top: -24px;
+    right: -8px;
+}
+
+.Tophot h2 span{
+    padding: 0px 20px 0px 0px;
+    color: #fff;
+}
+#product-box{
+    margin-top: 20px;
+    margin-bottom: 20px;
+   padding: 0 0 0px 0px;
+   border: #e0e0e0 solid 1px;
+}
+#w-shop{
+    padding: 0;
 }

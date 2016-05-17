@@ -115,11 +115,33 @@
             <div class="main_pro_cate">
                 <div class="product_cate">
                     <ul style="padding-left: 0px;">
-                    @foreach (var cate in Model.Danhmucsanphams)
+                    @for (int i = 0; i < Model.Danhmucsanphams.Count() - 1; i++)
                     {
-                        <li>
-                            <a title="@cate.MetaTitle" href="">
-                                <span>@cate.Name</span>
+                        if (i < 10)
+                        {
+                            <li>
+                                <a title="@Model.Danhmucsanphams[i].MetaTitle" href="">
+                                    <span>@Model.Danhmucsanphams[i].Name</span>
+                                    <div class="clearfix"></div>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li id="li-over">
+                                <a title="@Model.Danhmucsanphams[i].MetaTitle" href="">
+                                    <span>@Model.Danhmucsanphams[i].Name</span>
+                                    <div class="clearfix"></div>
+                                </a>
+                            </li>
+                        }
+
+                    }
+                    @if (Model.Danhmucsanphams.Count > 10)
+                    {
+                        <li class="all-cate">
+                            <a onclick="if (document.getElementById('li-over').style.display == 'none') { $('#li-over').css('display', 'block') } else { $('#li-over').css('display', 'none') }">
+                                <span class="active">Hiện tất cả danh mục</span>
                                 <div class="clearfix"></div>
                             </a>
                         </li>

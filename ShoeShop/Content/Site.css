@@ -36,3 +36,10 @@ footer{
 #myCarousel{
     
 }
+#li-over{
+    display: none;
+}
+.all-cate{
+    background: black;
+    color: white;
+}

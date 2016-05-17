@@ -7,6 +7,7 @@ using Models.Dao;
 using Models.EF;
 using ShoeShop.Common;
 using ShoeShop.Areas.admin.Code;
+using System.IO;
 
 namespace ShoeShop.Areas.admin.Controllers
 {
@@ -26,6 +27,11 @@ namespace ShoeShop.Areas.admin.Controllers
                 var model = sp.ListAll(page, pagesize);
                 return View(model);
             }
+        }
+        public ActionResult Edit(int id)
+        {
+            var cate = new SanPhamDao().ViewDetail(id);
+            return View(cate);
         }
         public ActionResult Details(int id)
         {
@@ -63,20 +69,7 @@ namespace ShoeShop.Areas.admin.Controllers
             }
             return View("Index");
         }
-        [HttpPost]
-        public ActionResult Upload(HttpPostedFileBase Image)
-        {
-            string path = Server.MapPath(Image.FileName);
-            Image.SaveAs(path);
-            return View("Create");
-        }
-        // GET: admin/SanPham/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            var pro = new SanPhamDao().ViewDetail(id);
-            return View(pro);
-        }
-
+        
         // POST: admin/SanPham/Edit/5
         [HttpPost]
         public ActionResult Edit(SanPham pro)
@@ -121,5 +114,6 @@ namespace ShoeShop.Areas.admin.Controllers
                 return RedirectToAction("Index");
             }
         }
+       
     }
 }

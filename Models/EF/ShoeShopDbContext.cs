@@ -36,7 +36,8 @@ namespace Models.EF
         public virtual DbSet<ThanhPho> ThanhPhoes { get; set; }
         public virtual DbSet<About> Abouts { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
-
+        public virtual DbSet<CongTy> CongTies { get; set; }
+        public virtual DbSet<KhachHang> KhachHangs { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ContentTag>()

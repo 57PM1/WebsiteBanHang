@@ -50,6 +50,8 @@ namespace ShoeShop.Controllers
         public ActionResult trangchu(HomePageViewModel model)
         {
             model.Danhmucsanphams = new NhomsanphamDao().ListAll();
+            ViewBag.TopHot = new SanPhamDao().GetTopHotProduct();
+            ViewBag.NewArivals=new SanPhamDao().GetNewArivalsProduct();
             return View(model);
 
         }

@@ -76,9 +76,9 @@ namespace Models.Dao
         {
             return db.NhomSanPhams.OrderByDescending(o=>o.CreateDate).ToPagedList(page,pageSize);
         }
-        public IEnumerable<NhomSanPham> ListAll()
+        public List<NhomSanPham> ListAll()
         {
-            return db.NhomSanPhams.OrderByDescending(o=>o.Order);
+            return db.NhomSanPhams.OrderByDescending(o=>o.Order).ToList();
         }
     }
 }

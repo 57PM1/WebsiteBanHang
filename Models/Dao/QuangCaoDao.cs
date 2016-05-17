@@ -57,7 +57,7 @@ namespace Models.Dao
                 res.Height = ad.Height;
                 res.Link = ad.Link;
                 res.Target = ad.Target;
-                res.Position = ad.Position;
+                res.Positon = ad.Positon;
                 res.Order = ad.Order;
                 res.Status = ad.Status;    
                 db.SaveChanges();

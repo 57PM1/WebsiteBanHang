@@ -101,6 +101,17 @@ namespace Models.Dao
             return db.SanPhams.Where(x => x.NhomSP_ID == nhomSanPhamId).ToList();
 
         }
-
+        public List<SanPham> GetTopHotProduct()
+        {
+            return db.SanPhams.Where(o => o.TopHot == true).ToList();
+        }
+        public List<SanPham> GetNewArivalsProduct()
+        {
+            var today = DateTime.Today;
+            var month = new DateTime(today.Year, today.Month, 1);
+            var first = month.AddMonths(-1);
+            var last = month.AddDays(-1);
+            return db.SanPhams.Take<SanPham>(10).ToList();
+        }
     }
 }
