@@ -12,7 +12,6 @@ namespace ShoeShop.Areas.admin.Models
         public string Name { get; set; }
         public string Address{ get; set; }
         public string Phone { get; set; }
-        public IEnumerable<CongTy> Parent { get; set; }
         public string Fax { get; set; }
        
     }

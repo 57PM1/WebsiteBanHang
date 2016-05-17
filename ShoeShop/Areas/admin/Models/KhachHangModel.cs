@@ -14,7 +14,6 @@ namespace ShoeShop.Areas.admin.Models
         public string Name { get; set; }
         public bool Sex { get; set; }
         public string Address { get; set; }
-        public IEnumerable<KhachHang> Parent { get; set; }
         public string Sdt { get; set; }
         public string Email { get; set; }
     }
