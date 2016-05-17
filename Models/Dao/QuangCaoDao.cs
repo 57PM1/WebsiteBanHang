@@ -50,7 +50,7 @@ namespace Models.Dao
         {
             try
             {
-                var res = db.QuangCaos.Find(ad.Name);
+                var res = db.QuangCaos.Find(ad.ID);
                 res.Name = ad.Name;
                 res.Url = ad.Url;
                 res.Width = ad.Width;

@@ -2,7 +2,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
 }
-@model PagedList.IPagedList<Models.EF.SanPham>
+@model PagedList.IPagedList<Models.EF.Feedback>
 @using PagedList.Mvc;
 <script src="~/Assets/admin/bower_components/jquery/dist/jquery.min.js"></script>
 <script>
@@ -28,7 +28,7 @@
             });
 
             var options = {};
-            options.url = "/SanPham/Delete";
+            options.url = "/FeedBack/Delete";
             options.type = "POST";
             options.data = JSON.stringify(selectedIDs);
             options.contentType = "application/json";
@@ -36,7 +36,7 @@
             options.success = function (msg) {
                 alert(msg);
             };
-            if (confirm("Bạn có thực sự muốn xóa những sản phẩm  đã chọn không?")) {
+            if (confirm("Bạn có thực sự muốn xóa những FeedBack đã chọn không?")) {
                 $.ajax(options);
             }
             for (var i = 0; i < selectedIDs.length; i++) {
@@ -47,7 +47,7 @@
 </script>
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Quản lý sản phẩm @Html.ActionLink("Thêm Sản phẩm mới","Create", "SanPham", new {@class="btn btn-success" })</h1>
+        <h1 class="page-header">Quản lý Feedback @Html.ActionLink("Thêm FeedBack mới","Create", "FeedBack", new {@class="btn btn-success" })</h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
@@ -59,10 +59,10 @@
                 <div class="row" style="padding-bottom: 20px;">
                     <div class="top-tbl-page">
                         <div class="col-md-4">
-                            <button id="delete" class="btn btn-danger">Xóa sản phẩm đã chọn</button>
+                            <button id="delete" class="btn btn-danger">Xóa Feedback đã chọn</button>
                         </div>
                         <div class="col-sm-8">
-                            @using (Html.BeginForm("Index", "SanPham", FormMethod.Get))
+                            @using (Html.BeginForm("Index", "FeedBack", FormMethod.Get))
                             {
                                     <div class="col-md-4"></div>
                                     <div class="col-md-6 text-right" style="padding-right: 0px;">
@@ -84,12 +84,15 @@
                             <tr>
                                 <th class="text-center"><input class="form-control" type="checkbox" name="ck_allCheck" id="ck_allCheck" /></th>
                                 <th class="text-center">STT</th>
-                                <th class="text-center">Tên sản phẩm</th>
-                                <th class="text-center">Mã</th>
-                                <th class="text-center">Mô tả</th>
-                                <th class="text-center">Price</th>
-                                <th class="text-center">Ngày tạo</th>
-                                <th class="text-center">Top Hot</th>
+                                <th class="text-center">Tên</th>
+                                <th class="text-center">Ngày sinh</th>
+                                <th class="text-center">Tỉnh</th>
+                                <th class="text-center">Địa chỉ</th>
+                                <th class="text-center">Sđt</th>
+                                <th class="text-center">Email</th>    
+                                <th class="text-center">Ngày đăng</th>     
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Nội dung</th>              
                             </tr>
                         </thead>
                         <tbody class="text-center">
@@ -103,10 +106,10 @@
                                         <td style="width: 40px;"><input class="form-control checkbox1" type="checkbox" value="@item.ID" /></td>
                                         <td>@i</td>
                                         <td>
-                                            <div class="w-100"><a class="btn-link h3 alert-link" href="/admin/SanPham/Edit/@item.ID">@item.Name</a></div>
+                                            <div class="w-100"><a class="btn-link h4 alert-link" href="/admin/FeedBack/Edit/@item.ID">@item.Name</a></div>
                                             <div class="w-100">
                                                 <ul>
-                                                    <li><a href="/admin/SanPham/Edit/@item.ID">Chỉnh sửa</a></li>
+                                                    <li><a href="/admin/FeedBack/Edit/@item.ID">Chỉnh sửa</a></li>
                                                     <li>|</li>
                                                     <li>
                                                         @Ajax.ActionLink("Xóa", "Delete", new { @id = item.ID }, new AjaxOptions
@@ -120,25 +123,20 @@
                                             </ul>
                                         </div>
                                     </td>
-                                    <td>@item.Code</td>
-                                    <td>@item.Description</td>
-                                    <td>@item.Price</td>
-                                    @if (item.CreateDate != null)
-                                    {
-                                        <td>@item.CreateDate.Value.ToString("dd/MM/yyyy")</td>
-                                    }
-                                    else
-                                    {
-                                        <td>&nbsp;</td>
-                                    }
-                                        <td>@item.TopHot</td>
+                                    <td>@item.Birthday</td>
+                                    <td>@item.Province</td>
+                                    <td>@item.Address</td>
+                                    <td>@item.Tel</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.CreateDate</td>
+                                    <td>@item.Status</td>
+                                    <td>@item.Content</td>
                                 </tr>
-
                                 }
                             }
                             else
                             {
-                                <tr><td colspan="4" class="danger">Không có sản phẩm nào!</td></tr>
+                                <tr><td colspan="4" class="danger">Không có Feedback nào!</td></tr>
                             }
                         </tbody>
                     </table>
