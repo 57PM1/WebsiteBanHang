@@ -9,6 +9,13 @@ namespace Models.EF
     [Table("Feedback")]
     public partial class Feedback
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Feedback()
+        {
+            DatHangs = new HashSet<DatHang>();
+        }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [StringLength(500)]
@@ -31,9 +38,12 @@ namespace Models.EF
 
         public DateTime? CreateDate { get; set; }
 
-        public bool Status { get; set; }
+        public bool? Status { get; set; }
 
         [Column(TypeName = "ntext")]
         public string Content { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DatHang> DatHangs { get; set; }
     }
 }

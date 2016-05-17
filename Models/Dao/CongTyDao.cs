@@ -42,19 +42,19 @@ namespace Models.Dao
                 var res = db.CongTies.Where(o => o.Name.Contains(searchKey));
                 return res.OrderByDescending(o => o.Name).ToPagedList<CongTy>(pageNum, pageSize);
             }
-            public CongTy ViewDetail(int? id)
+            public CongTy ViewDetail(int id)
             {
                 return db.CongTies.Find(id);
             }
-            public bool Update(CongTy com)
+            public bool Update(CongTy cus)
             {
                 try
                 {
-                    var res = db.CongTies.Find(com.ID);
-                    res.Name = com.Name;
-                    res.Address = com.Address;
-                    res.Phone = com.Phone;
-                    res.Fax = com.Fax;
+                    var res = db.CongTies.Find(cus.Name);
+                    res.Name = cus.Name;
+                    res.Address = cus.Address;
+                    res.Phone = cus.Phone;
+                    res.Fax = cus.Fax;
                     db.SaveChanges();
                     return true;
                 }

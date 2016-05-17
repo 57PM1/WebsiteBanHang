@@ -13,6 +13,7 @@ namespace ShoeShop.Areas.admin.Models
         public string Name { get; set; }
         public string Code { get; set; }
         public string MetaTitle { get; set; }
+        public IEnumerable<SanPham> Parent { get; set; }
         public string Description { get; set; }
         public int? NhomSP_ID { get; set; }
         public string Detail { get; set; }
@@ -32,5 +33,9 @@ namespace ShoeShop.Areas.admin.Models
         public int? Status { get; set; }
         public bool TopHot { get; set; }
         public int? ViewCount { get; set; }
+        public SanPhamsModel()
+        {
+            this.Parent = new SanPhamDao().ListAll(1, 10);
+        }
     }
 }
