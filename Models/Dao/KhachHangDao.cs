@@ -53,7 +53,7 @@ namespace Models.Dao
             {
                 var res = db.KhachHangs.Find(cus.ID);
                 res.Name = cus.Name;
-                res.Sex = cus.Sex;
+                res.Gender = cus.Gender;
                 res.Address = cus.Address;
                 res.Sdt = cus.Sdt;
                 res.Email = cus.Email;

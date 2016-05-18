@@ -13,6 +13,7 @@ namespace Models.EF
         public SanPham()
         {
             ChiTietDatHangs = new HashSet<ChiTietDatHang>();
+            Tags = new HashSet<Tag>();
         }
 
         public int ID { get; set; }
@@ -75,5 +76,10 @@ namespace Models.EF
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietDatHang> ChiTietDatHangs { get; set; }
+
+        public virtual NhomSanPham NhomSanPham { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tag> Tags { get; set; }
     }
 }

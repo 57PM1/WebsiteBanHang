@@ -93,7 +93,7 @@ namespace ShoeShop.Areas.admin.Controllers
                     ModelState.AddModelError("", CommonConstant.UPDATE_FAIL);
                 }
             }
-            return View("Index");
+            return RedirectToAction("Index");
         }
 
         // GET: admin/ThanhPho/Delete/5

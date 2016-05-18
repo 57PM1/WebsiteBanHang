@@ -9,7 +9,12 @@ namespace Models.EF
     [Table("DatHang")]
     public partial class DatHang
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public DatHang()
+        {
+            ChiTietDatHangs = new HashSet<ChiTietDatHang>();
+        }
+
         public int Id { get; set; }
 
         public int? Khachhang_ID { get; set; }
@@ -21,6 +26,9 @@ namespace Models.EF
 
         public int? Status { get; set; }
 
-        public virtual Feedback Feedback { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietDatHang> ChiTietDatHangs { get; set; }
+
+        public virtual KhachHang KhachHang { get; set; }
     }
 }

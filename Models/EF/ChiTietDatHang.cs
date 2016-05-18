@@ -9,7 +9,6 @@ namespace Models.EF
     [Table("ChiTietDatHang")]
     public partial class ChiTietDatHang
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         public int? Dathang_ID { get; set; }
@@ -17,5 +16,9 @@ namespace Models.EF
         public int? Sanpham_ID { get; set; }
 
         public int? Quantity { get; set; }
+
+        public virtual DatHang DatHang { get; set; }
+
+        public virtual SanPham SanPham { get; set; }
     }
 }

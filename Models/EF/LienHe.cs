@@ -9,7 +9,6 @@ namespace Models.EF
     [Table("LienHe")]
     public partial class LienHe
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [StringLength(500)]

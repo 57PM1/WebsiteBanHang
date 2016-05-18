@@ -9,7 +9,6 @@ namespace Models.EF
     [Table("HoTro")]
     public partial class HoTro
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [StringLength(500)]

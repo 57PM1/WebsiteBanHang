@@ -50,8 +50,9 @@ namespace Models.Dao
             {
                 try
                 {
-                    var res = db.ThanhPhoes.Find(cus.Name);
-                    res.Name = cus.Name;
+                ThanhPho tp = new ThanhPho();
+                tp = db.ThanhPhoes.Find(cus.ID);
+                    tp.Name = cus.Name;
                     db.SaveChanges();
                     return true;
                 }

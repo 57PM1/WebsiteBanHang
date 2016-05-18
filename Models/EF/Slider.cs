@@ -9,7 +9,6 @@ namespace Models.EF
     [Table("Slider")]
     public partial class Slider
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [StringLength(250)]
@@ -33,6 +32,6 @@ namespace Models.EF
         [StringLength(50)]
         public string ModifyBy { get; set; }
 
-        public bool? Status { get; set; }
+        public bool Status { get; set; }
     }
 }

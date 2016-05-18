@@ -20,7 +20,7 @@ namespace Models.EF
         [StringLength(50)]
         public string Name { get; set; }
 
-        public bool Sex { get; set; }
+        public bool Gender { get; set; }
 
         [StringLength(250)]
         public string Address { get; set; }

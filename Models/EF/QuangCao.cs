@@ -9,7 +9,6 @@ namespace Models.EF
     [Table("QuangCao")]
     public partial class QuangCao
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [StringLength(500)]
@@ -27,7 +26,7 @@ namespace Models.EF
 
         public int? Target { get; set; }
 
-        public int? Positon { get; set; }
+        public int? Position { get; set; }
 
         public int? Order { get; set; }
 

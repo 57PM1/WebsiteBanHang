@@ -9,8 +9,7 @@ namespace Models.EF
     [Table("About")]
     public partial class About
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public long ID { get; set; }
+        public int ID { get; set; }
 
         [StringLength(250)]
         public string Name { get; set; }

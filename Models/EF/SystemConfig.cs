@@ -9,8 +9,7 @@ namespace Models.EF
     [Table("SystemConfig")]
     public partial class SystemConfig
     {
-        [StringLength(50)]
-        public string ID { get; set; }
+        public int ID { get; set; }
 
         [StringLength(500)]
         public string Name { get; set; }

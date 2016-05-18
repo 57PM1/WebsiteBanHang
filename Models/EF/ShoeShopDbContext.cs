@@ -8,20 +8,19 @@ namespace Models.EF
     public partial class ShoeShopDbContext : DbContext
     {
         public ShoeShopDbContext()
-            : base("name=ShoeShopDbContext")
+            : base("name=ShoeShopDbContext2")
         {
         }
 
+        public virtual DbSet<About> Abouts { get; set; }
         public virtual DbSet<ChiTietDatHang> ChiTietDatHangs { get; set; }
-        public virtual DbSet<Content> Contents { get; set; }
-        public virtual DbSet<ContentTag> ContentTags { get; set; }
+        public virtual DbSet<CongTy> CongTies { get; set; }
         public virtual DbSet<DatHang> DatHangs { get; set; }
         public virtual DbSet<Feedback> Feedbacks { get; set; }
-        public virtual DbSet<Footer> Footers { get; set; }
         public virtual DbSet<HoTro> HoTroes { get; set; }
+        public virtual DbSet<KhachHang> KhachHangs { get; set; }
+        public virtual DbSet<Language> Languages { get; set; }
         public virtual DbSet<LienHe> LienHes { get; set; }
-        public virtual DbSet<LogoBanner> LogoBanners { get; set; }
-        public virtual DbSet<Mau_layout> Mau_layout { get; set; }
         public virtual DbSet<Menu> Menus { get; set; }
         public virtual DbSet<MenuType> MenuTypes { get; set; }
         public virtual DbSet<NguoiDung> NguoiDungs { get; set; }
@@ -34,27 +33,23 @@ namespace Models.EF
         public virtual DbSet<SystemConfig> SystemConfigs { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
         public virtual DbSet<ThanhPho> ThanhPhoes { get; set; }
-        public virtual DbSet<About> Abouts { get; set; }
-        public virtual DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ContentTag>()
-                .Property(e => e.TagID)
-                .IsUnicode(false);
+            modelBuilder.Entity<DatHang>()
+                .HasMany(e => e.ChiTietDatHangs)
+                .WithOptional(e => e.DatHang)
+                .HasForeignKey(e => e.Dathang_ID);
 
-            modelBuilder.Entity<Feedback>()
+            modelBuilder.Entity<KhachHang>()
                 .HasMany(e => e.DatHangs)
-                .WithOptional(e => e.Feedback)
+                .WithOptional(e => e.KhachHang)
                 .HasForeignKey(e => e.Khachhang_ID);
 
-            modelBuilder.Entity<Footer>()
-                .Property(e => e.ID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Mau_layout>()
-                .Property(e => e.Mamau)
-                .IsUnicode(false);
+            modelBuilder.Entity<NhomSanPham>()
+                .HasMany(e => e.SanPhams)
+                .WithOptional(e => e.NhomSanPham)
+                .HasForeignKey(e => e.NhomSP_ID);
 
             modelBuilder.Entity<SanPham>()
                 .Property(e => e.Price)
@@ -64,21 +59,15 @@ namespace Models.EF
                 .Property(e => e.PromotionPrice)
                 .HasPrecision(18, 0);
 
-            modelBuilder.Entity<SystemConfig>()
-                .Property(e => e.ID)
-                .IsUnicode(false);
+            modelBuilder.Entity<SanPham>()
+                .HasMany(e => e.ChiTietDatHangs)
+                .WithOptional(e => e.SanPham)
+                .HasForeignKey(e => e.Sanpham_ID);
 
-            modelBuilder.Entity<Tag>()
-                .Property(e => e.ID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Category>()
-                .Property(e => e.Price)
-                .HasPrecision(18, 0);
-
-            modelBuilder.Entity<Category>()
-                .Property(e => e.PromotionPrice)
-                .HasPrecision(18, 0);
+            modelBuilder.Entity<SanPham>()
+                .HasMany(e => e.Tags)
+                .WithMany(e => e.SanPhams)
+                .Map(m => m.ToTable("SanPhamTag").MapLeftKey("SanPhamID").MapRightKey("TagID"));
         }
     }
 }

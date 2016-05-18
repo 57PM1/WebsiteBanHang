@@ -9,7 +9,6 @@ namespace Models.EF
     [Table("NguoiDung")]
     public partial class NguoiDung
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [Required]

@@ -69,7 +69,7 @@ namespace ShoeShop.Areas.admin.Controllers
             Image.SaveAs(path);
             return View("Create");
         }
-        // GET: admin/NhomSanPham/Edit/5
+        // GET: admin/KhachHang/Edit/5
         public ActionResult Edit(int id)
         {
             var kh = new KhachhangDao().ViewDetail(id);

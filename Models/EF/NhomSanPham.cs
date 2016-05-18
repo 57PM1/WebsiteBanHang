@@ -9,6 +9,12 @@ namespace Models.EF
     [Table("NhomSanPham")]
     public partial class NhomSanPham
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public NhomSanPham()
+        {
+            SanPhams = new HashSet<SanPham>();
+        }
+
         public int Id { get; set; }
 
         [StringLength(500)]
@@ -44,5 +50,8 @@ namespace Models.EF
         public string MetaDescription { get; set; }
 
         public bool ShowOnHome { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SanPham> SanPhams { get; set; }
     }
 }

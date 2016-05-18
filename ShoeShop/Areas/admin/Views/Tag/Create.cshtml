@@ -1,0 +1,49 @@
+﻿@model Models.EF.Tag
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+@section Scriptfooter {
+    <script>
+    function Browser(){
+        var finder = new CKFinder();
+        finder.SelectFunction = SetFileField;
+        finder.Popup;
+    }
+    function SetFileField(fileUrl) {
+        alert("ad");
+        document.getElementById('Image').value = fileUrl;
+    }
+    </script>
+}
+<div class="row">
+    <div class="col-md-9">
+        <h2>Thêm mới Tag</h2>
+    </div>
+    <div class="col-md-3">
+        <h2>@Html.ActionLink("Trở về", "Index", "Tag", new { @class = "btn btn-info" })</h2>
+    </div>
+</div>
+@using (Html.BeginForm("Create", "Tag", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" role="form">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>     
+        </div>
+        <div class="form-group" style="padding-top: 10px;">
+            <div class="col-md-offset-2 col-md-6">
+                <input type="submit" value="Thêm mới" class="btn btn-success" />
+                <input type="reset" class="btn btn-warning" value="Hủy" />
+            </div>
+    </div>
+            }
+

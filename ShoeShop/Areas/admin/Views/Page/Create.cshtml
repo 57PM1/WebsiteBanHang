@@ -1,0 +1,71 @@
+﻿@model Models.EF.Page
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+@section Scriptfooter {
+    <script>
+    function Browser(){
+        var finder = new CKFinder();
+        finder.SelectFunction = SetFileField;
+        finder.Popup;
+    }
+    function SetFileField(fileUrl) {
+        alert("ad");
+        document.getElementById('Image').value = fileUrl;
+    }
+    </script>
+}
+<div class="row">
+    <div class="col-md-9">
+        <h2>Thêm mới Page</h2>
+    </div>
+    <div class="col-md-3">
+        <h2>@Html.ActionLink("Trở về", "Index", "Page", new { @class = "btn btn-info" })</h2>
+    </div>
+</div>
+@using (Html.BeginForm("Create", "Page", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" role="form">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>     
+   
+        <div class="form-group">
+            @Html.LabelFor(model => model.Postdate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Postdate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Postdate, "", new { @class = "text-danger" })
+            </div>
+        </div>  
+        <div class="form-group">
+            @Html.LabelFor(model => model.Author, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Author, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Author, "", new { @class = "text-danger" })
+            </div>
+        </div>  
+        <div class="form-group">
+            @Html.LabelFor(model => model.PageContent, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.PageContent, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PageContent, "", new { @class = "text-danger" })
+            </div>
+        </div>     
+        </div>
+        <div class="form-group" style="padding-top: 10px;">
+            <div class="col-md-offset-2 col-md-6">
+                <input type="submit" value="Thêm mới" class="btn btn-success" />
+                <input type="reset" class="btn btn-warning" value="Hủy" />
+            </div>
+    </div>
+            }
+

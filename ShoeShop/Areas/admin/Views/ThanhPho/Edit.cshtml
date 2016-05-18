@@ -7,7 +7,7 @@
 
 <h2>Chỉnh sửa</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit","ThanhPho",FormMethod.Post))
 {
     @Html.AntiForgeryToken()
     
@@ -26,7 +26,7 @@
         </div>
         <div class="form-group" style="padding-top: 10px;">
             <div class="col-md-offset-2 col-md-6">
-                <input type="submit" value="Thêm mới" class="btn btn-success" />
+                <input type="submit" value="Lưu " class="btn btn-success" />
                 <input type="reset" class="btn btn-warning" value="Hủy" />
             </div>
         </div>
