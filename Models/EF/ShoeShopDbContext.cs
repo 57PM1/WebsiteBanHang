@@ -34,6 +34,7 @@ namespace Models.EF
         public virtual DbSet<Tag> Tags { get; set; }
         public virtual DbSet<ThanhPho> ThanhPhoes { get; set; }
 
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<DatHang>()

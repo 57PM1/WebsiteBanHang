@@ -61,20 +61,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\AboutDao.cs" />
+    <Compile Include="Dao\CongTyDao.cs" />
+    <Compile Include="Dao\FeedBackDao.cs" />
+    <Compile Include="Dao\HoTroDao.cs" />
+    <Compile Include="Dao\KhachHangDao.cs" />
+    <Compile Include="Dao\LienHeDao.cs" />
+    <Compile Include="Dao\MenuDao.cs" />
+    <Compile Include="Dao\MenuTypeDao.cs" />
+    <Compile Include="Dao\PageDao.cs" />
+    <Compile Include="Dao\QuangCaoDao.cs" />
+    <Compile Include="Dao\SanPhamDao.cs" />
     <Compile Include="Dao\NhomsanphamDao.cs" />
+    <Compile Include="Dao\SliderDao.cs" />
+    <Compile Include="Dao\SystemConfigDao.cs" />
+    <Compile Include="Dao\TagDao.cs" />
+    <Compile Include="Dao\ThanhPhoDao.cs" />
     <Compile Include="Dao\UserDao.cs" />
     <Compile Include="EF\About.cs" />
-    <Compile Include="EF\Category.cs" />
     <Compile Include="EF\ChiTietDatHang.cs" />
-    <Compile Include="EF\Content.cs" />
-    <Compile Include="EF\ContentTag.cs" />
+    <Compile Include="EF\CongTy.cs" />
     <Compile Include="EF\DatHang.cs" />
     <Compile Include="EF\Feedback.cs" />
-    <Compile Include="EF\Footer.cs" />
     <Compile Include="EF\HoTro.cs" />
+    <Compile Include="EF\KhachHang.cs" />
+    <Compile Include="EF\Language.cs" />
     <Compile Include="EF\LienHe.cs" />
-    <Compile Include="EF\LogoBanner.cs" />
-    <Compile Include="EF\Mau_layout.cs" />
     <Compile Include="EF\Menu.cs" />
     <Compile Include="EF\MenuType.cs" />
     <Compile Include="EF\NguoiDung.cs" />
@@ -95,7 +107,9 @@
     <Content Include="Content\PagedList.css" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

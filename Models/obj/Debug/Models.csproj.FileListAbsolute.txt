@@ -12,3 +12,17 @@ C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\bin\Debu
 C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\obj\Debug\Models.dll
 C:\Users\milkyway\Documents\Visual Studio 2015\Projects\ShoeShop\Models\obj\Debug\Models.pdb
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\bin\Debug\Models.dll.config
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\bin\Debug\Models.dll
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\bin\Debug\Models.pdb
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\bin\Debug\EntityFramework.dll
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\bin\Debug\PagedList.dll
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\bin\Debug\PagedList.Mvc.dll
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\bin\Debug\EntityFramework.xml
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\bin\Debug\PagedList.xml
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\bin\Debug\PagedList.Mvc.xml
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\obj\Debug\Models.dll
+D:\ĐỒ ÁN\qlda\WebsiteBanHang\Models\obj\Debug\Models.pdb
