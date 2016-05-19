@@ -78,7 +78,7 @@ namespace Models.Dao
         }
         public List<NhomSanPham> ListAll()
         {
-            return db.NhomSanPhams.OrderByDescending(o=>o.Order).ToList();
+            return db.NhomSanPhams.ToList();
         }
     }
 }

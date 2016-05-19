@@ -61,17 +61,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\CongTyDao.cs" />
+    <Compile Include="Dao\KhachHangDao.cs" />
     <Compile Include="Dao\NhomsanphamDao.cs" />
+    <Compile Include="Dao\QuangCaoDao.cs" />
+    <Compile Include="Dao\SanPhamDao.cs" />
+    <Compile Include="Dao\ThanhPhoDao.cs" />
     <Compile Include="Dao\UserDao.cs" />
     <Compile Include="EF\About.cs" />
     <Compile Include="EF\Category.cs" />
     <Compile Include="EF\ChiTietDatHang.cs" />
+    <Compile Include="EF\CongTy.cs" />
     <Compile Include="EF\Content.cs" />
     <Compile Include="EF\ContentTag.cs" />
     <Compile Include="EF\DatHang.cs" />
     <Compile Include="EF\Feedback.cs" />
     <Compile Include="EF\Footer.cs" />
     <Compile Include="EF\HoTro.cs" />
+    <Compile Include="EF\KhachHang.cs" />
+    <Compile Include="EF\Language.cs" />
     <Compile Include="EF\LienHe.cs" />
     <Compile Include="EF\LogoBanner.cs" />
     <Compile Include="EF\Mau_layout.cs" />

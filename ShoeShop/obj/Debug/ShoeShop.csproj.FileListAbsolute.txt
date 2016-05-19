@@ -224,3 +224,23 @@ G:\DOCUMENTS\QUAN_LY_DU_AN\WebsiteBanHang\ShoeShop\bin\Lucene.Net.Contrib.Memory
 G:\DOCUMENTS\QUAN_LY_DU_AN\WebsiteBanHang\ShoeShop\obj\Debug\ShoeShop.csprojResolveAssemblyReference.cache
 G:\DOCUMENTS\QUAN_LY_DU_AN\WebsiteBanHang\ShoeShop\obj\Debug\ShoeShop.dll
 G:\DOCUMENTS\QUAN_LY_DU_AN\WebsiteBanHang\ShoeShop\obj\Debug\ShoeShop.pdb
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\roslyn\csc.exe
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\roslyn\vbc.exe
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\roslyn\VBCSCompiler.exe
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\ShoeShop.dll.config
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\ShoeShop.dll
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\ShoeShop.pdb
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\Models.dll
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\bin\Models.pdb
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\obj\Debug\ShoeShop.csprojResolveAssemblyReference.cache
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\obj\Debug\ShoeShop.dll
+C:\Users\Hoang Hai\Source\Repos\WebsiteBanHang\ShoeShop\obj\Debug\ShoeShop.pdb
